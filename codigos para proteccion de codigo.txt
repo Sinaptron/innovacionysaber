@@ -1,0 +1,174 @@
+atajos teclado para ver codigo fuente o diseño programador
+teclas F12, Ctrl+Shift+I, Ctrl+Shift+J, y Ctrl+U
+
+codificar archivos para que no sean legibles:
+javascript html y css - con herramientas:
+
+🔹 1. HTML Minifier (Minificación de HTML y CSS)
+https://kangax.github.io/html-minifier/
+✅ Reduce el tamaño de archivos HTML y CSS eliminando espacios, comentarios y código innecesario.
+✅ Compatible con HTML5.
+✅ Soporta inline CSS y JS dentro del HTML.
+
+
+🔹 2. Obfuscator.io (JavaScript)  https://obfuscator.io/
+✅ Ofusca HTML y CSS haciéndolos menos legibles.
+✅ Convierte nombres de clases y atributos en cadenas aleatorias.
+✅ Puede reemplazar nombres de variables en CSS para dificultar su lectura.
+
+pide se postee la api antes de minificar
+🔹 3. CSS Minifier   https://www.toptal.com/developers/cssminifier
+✅ Comprime el código CSS eliminando espacios y comentarios.
+✅ Cambia los nombres de las clases para que sean más difíciles de leer.
+✅ Compatible con cualquier framework CSS.
+
+🔹 4. HTML Guard   se instalo "html guard"
+✅ Cifra y oculta código HTML, dificultando la inspección.
+✅ Opciones para deshabilitar el clic derecho y selección de texto.
+✅ Puede codificar entidades HTML para evitar copias.
+
+🔹 5. Webtool HTML Encoder
+✅ Convierte código HTML en caracteres codificados (&#xNN;) para hacerlo ilegible.
+✅ Útil para ocultar contenido sensible en el código fuente.
+✅ Puede combinarse con JavaScript para desencriptar en tiempo real
+
+
+utilidades para devweb
+https://webcode.tools/
+
+
+
+
+
+HTML
+EVITAR que desactiven JavaScript para ver el código, se redireccionara a otro sitio
+<noscript>
+  <meta http-equiv="refresh" content="0;url=https://www.google.com">
+</noscript>
+
+CSS 
+bloqueo de descarga de imagenes
+ img {
+    pointer-events: none; /* Deshabilita clic derecho */
+    user-drag: none;      /* Evita arrastrar la imagen */
+    -webkit-user-drag: none;
+  }
+
+
+JAVASCRIPT
+METODO 01
+  // Bloquear teclas como F12, Ctrl+U, Ctrl+Shift+I
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "F12" || 
+        (event.ctrlKey && event.shiftKey && event.key === "I") || 
+        (event.ctrlKey && event.key === "U")) {
+      event.preventDefault();
+    }
+  });
+
+  // Bloquear clic derecho
+  document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+  });
+
+
+
+METODO 02
+  document.addEventListener("keydown", function (event) {
+    // Bloquear F12
+    if (event.key === "F12") {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+
+    // Bloquear Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+    if ((event.ctrlKey && event.shiftKey && (event.key === "I" || event.key === "J")) ||
+        (event.ctrlKey && event.key === "U")) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  });
+
+  // Bloquear clic derecho
+  document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+  });
+
+
+
+METODO 03
+  document.onkeydown = function(event) {
+    if (event.ctrlKey && event.key === "u") {
+      window.location.href = "https://www.google.com"; // Redirige a otro sitio
+      return false;
+    }
+  };
+
+
+
+
+Opciones para bloquear el código fuente de la sección de geolocalización
+✅ 1️⃣ Usar un iframe con restricciones
+
+<iframe 
+    src="https://www.google.com/maps/embed?pb=..."
+    style="pointer-events: none;"
+    sandbox="allow-scripts allow-same-origin"
+    referrerpolicy="no-referrer"
+    oncontextmenu="return false;">
+</iframe>
+
+✔️ pointer-events: none; evita interacciones con el mapa (solo lo muestra).
+✔️ sandbox="allow-scripts allow-same-origin" restringe interacciones de terceros.
+✔️ referrerpolicy="no-referrer" evita que se filtren datos.
+✔️ oncontextmenu="return false;" bloquea el clic derecho en el mapa.
+
+
+✅ 2️⃣ Capa de bloqueo con div transparente
+ agregar un div encima del mapa para evitar clics e inspecciones:
+ Crea una capa invisible (div) encima del mapa que bloquea clics y el menú contextual.
+
+<div style="position: relative;">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=..."
+        style="width: 100%; height: 500px; border: 0;"
+        oncontextmenu="return false;">
+    </iframe>
+    <div style="
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: transparent;
+        z-index: 9999;
+    " oncontextmenu="return false;"></div>
+</div>
+
+✅ 3️⃣ Ofuscar la URL del mapa
+Si el usuario inspecciona la página, verá la URL del mapa. Para ocultarla:
+
+<script>
+  let mapa = atob("aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9tYXBzL2VtYmVkP3BiPS4uLg==");
+  document.write('<iframe src="' + mapa + '" style="width:100%; height:500px; border:0;"></iframe>');
+</script>
+
+✔️ atob("...") codifica la URL en Base64, haciéndola difícil de encontrar en el código fuente.
+
+
+✅ 4️⃣ Bloquear el acceso al mapa si detectan herramientas de desarrollador
+Puedes cerrar la página si alguien abre las herramientas de inspección:
+
+<script>
+  setInterval(function() {
+    if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
+      document.body.innerHTML = "";
+      alert("Inspeccionar está deshabilitado.");
+      window.location.href = "https://www.google.com";
+    }
+  }, 1000);
+</script>
+✔️ Detecta si las herramientas de desarrollo están abiertas.
+✔️ Borra la página y redirige al usuario.
+
+
+Ofuscar el código fuente (Opcional)
+Si quieres que el código sea difícil de leer, usa una herramienta de ofuscación JavaScript como JS Obfuscator para hacer el código ilegible.
+https://obfuscator.io/#code

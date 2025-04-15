@@ -1,0 +1,119 @@
+fuente-landing academia
+
+
+
+1239 lineas
+
+
+
+slider kitar caricaturas, poner imagenes reales
+darle altura al fondo del slider
+
+
+padding: 0 20px;
+ significa:
+0px en la parte superior e inferior.
+20px en los lados izquierdo y derecho.
+
+padding: 20px 0;
+ significa:
+20px en la parte superior e inferior.
+0px en los lados izquierdo y derecho.
+
+padding: 20px 0 20px 15px;
+significa:
+20px arriba
+0px derecha
+20px abajo
+15px izquierda
+
+padding: 20px 15px 20px 0;
+significa:
+20px arriba
+15px derecha
+20px abajo
+0px izquierda
+
+
+
+
+
+
+/* Asegura que el texto sea visible en todas las pantallas */
+@media screen and (max-width: 768px) {
+    .texto {        display: flex;     }       }
+
+-------------------------------------
+.container {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1200px;
+}
+Con estas 3 propiedades de CSS conseguimos que a) El elemento se centre en la página, b) tenga un ancho del 90% de la ventana y c) su ancho nunca sea superior a 1200 pixeles.
+
+Es  decir, hemos conseguido que el elemento con la clase container sea responsive sin la necesidad siquiera de escribir un media query.
+--------------------------------------
+
+/* Estilos para diseño responsivo */
+@media (max-width: 768px) {
+    .image {
+        flex: 0 0 100%; /* Columna completa en pantallas más pequeñas */
+    }
+}
+
+- `flex` en ".image" se usa para controlar el espacio que ocupan en la fila. En pantallas más pequeñas (menos de 768px de ancho), hemos definido que ocupen el 100% del ancho de la columna con `flex: 0 0 100%;`.
+- `max-width: 100%` y `height: auto` en las imágenes aseguran que las imágenes se redimensionen de manera apropiada.
+
+------------------------------------
+
+
+
+
+/* Extra pequeños (hasta 320px - celulares muy pequeños) */
+@media only screen and (max-width: 320px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+/* Móviles pequeños (321px - 480px) */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+
+/* Móviles grandes (481px - 767px) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+    body {
+        background-color: lightcoral;
+    }
+}
+
+/* Tablets en modo retrato (768px - 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-color: lightyellow;
+    }
+}
+
+/* Tablets en modo paisaje y laptops pequeñas (1025px - 1200px) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        background-color: lightskyblue;
+    }
+}
+
+/* Escritorio estándar (1201px - 1600px) */
+@media only screen and (min-width: 1201px) and (max-width: 1600px) {
+    body {
+        background-color: lightpink;
+    }
+}
+
+/* Escritorio grande y pantallas 4K (1601px en adelante) */
+@media only screen and (min-width: 1601px) {
+    body {
+        background-color: lightgray;
+    }
+}

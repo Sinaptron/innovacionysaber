@@ -13,8 +13,8 @@ EN FACE ADECUAR PARRAFO PARA INIVTARLOS A SEGUIR Y COMPARTIR LA PAGINA
 -----PORQUE YA ESTAN EN LA PAGINA
 
 SINCRONIZAR WEB Y REDES SOCIALES CON LOS LINK Y LOS PAKETES
-INSTAGRAM....  @innovacion_y_saber
-TIKTOK....  www.tiktok.com/@innovacion_y_saber
+INSTAGRAM....  https://www.instagram.com/innovacion_y_saber
+TIKTOK.... https://www.tiktok.com/@innovacionysaber
 
 MEJORAR CARGA Y VELOCIDAD DE PAGINAS EN NAVEGADOR:
 imágenes como: .png
@@ -38,6 +38,15 @@ Considera usar íconos SVG directamente en lugar de Font Awesome (más rápido y
 conversoina webp     https://www.freeconvert.com/es
 ###########################
 
+  html,
+  body {
+	width: 100%;
+	overflow-x: hidden;
+	/* Oculta cualquier desbordamiento lateral */
+	background-color: var(--color-fondo);
+  }
+  
+  #################################
 🔹 Versiones cortas para banners móviles:
 Aprende sin complicaciones. A tu ritmo.
 Contenido útil, rápido y accesible.

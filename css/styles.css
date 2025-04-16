@@ -1,1 +1,1328 @@
-/* ====================================================== 🔹 RESET CSS - Normaliza estilos en todos los navegadores ====================================================== */ * { margin: 0; padding: 0; box-sizing: border-box; /* scroll-behavior: smooth; */ } /* ====================================================== 🔹 VARIABLES GLOBALES - Colores y configuraciones generales ====================================================== */ :root { /* Colores */ --color-fondo: #e0f7e9; /* Verde muy leve */ --color-principal: #4caf50; /* Verde más intenso para elementos destacados */ --color-secundario: #81c784; /* Verde suave para botones */ --color-hover: #388e3c; /* Verde oscuro para hover en botones */ --color-texto: #333333; /* Color de texto principal */ --color-footer: #a5d6a7; /* Verde claro para el footer */ --color-borde: #c8e6c9; /* Verde muy suave para bordes */ --blanco-marfil: #FFFFF0; --color-azul-claro: #ADD8E6; /* Azul claro */ --color-verde-fuerte: #006400; --color-boton-whatsapp: #25d366; --color-fbk-btn: #1e88e5; /* Color boton modal */ --color-fbk-btn-hover: #1565c0; /* Color boton modal al pasar el mouse */ --color-sw-btn: #FFB347; /* Color boton modal */ --color-sw-btn-hover: #FF8C00; /* Color boton modal al pasar el mouse */ } /*bloqueo de descarga de imagenes*/ img { pointer-events: none;	/* Deshabilita clic derecho */ user-drag: none;	/* Evita arrastrar la imagen */ -webkit-user-drag: none; /* Evita arrastrar la imagen en WebKit */ user-select: none; /* Evita la selección en algunos navegadores */ -webkit-user-drag: none; } /* ====================================================== 🔹 CONFIGURACIONES HTML - BODY ====================================================== */ /* efecto de movimiento al desplazarse por medio de los menus (para que no salte)*/ html { scroll-behavior: smooth; /* width: 100%; */ } html, body { width: 100%; overflow-x: hidden; /* Oculta cualquier desbordamiento lateral */ background-color: var(--color-fondo); } /* ====================================================== 🔹 CONFIGURACIONES GENERALES DEL BODY ====================================================== */ body { font-family: "Roboto", sans-serif; line-height: 1.6; /* color: var(--body-bg); */ overflow-x: hidden; /* width: 100%; */ } /* ====================================================== 🔹 HEADER Y NAVBAR (Menú de navegación) ====================================================== */ header { /* background: #333; */ color: #fff; padding: 10px 0; position: fixed; width: 100%; z-index: 1000; } /* h1 { color: var(--h1); } */ h2 { color: var(--h2); } h3 { color: var(--h3); } p { color: var(--parrafo); } .navbar { position: fixed; top: 0; left: 0; width: 100%; background: var(--color-verde-fuerte); padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; } .logo { /* color: white; */ font-size: 24px; font-weight: bold; } .menu-toggle { display: none; background: none; border: none; font-size: 28px; color: var(--color-fondo); cursor: pointer; padding-right: 10px; /* mueve boton menu hamburguesa a la izquierda*/ } .nav-links { list-style: none; display: flex; } .nav-links li { margin: 0 7px; /* Reducido el margen entre elementos */ } .nav-links li a { text-decoration: none; color: var(--color-fondo); background: var(--color-principal); font-size: 20px; padding: 8px 0; /* Ajustado para evitar que el padding horizontal altere el ancho */ transition: 0.3s; border-radius: 10px; width: 115px; /* Fijamos un ancho uniforme */ display: inline-block; /* Permite que el ancho se aplique correctamente */ text-align: center; /* Centra el texto dentro del botón */ } .nav-links li a:hover { color: var(--color-principal); background: var(--color-fondo); /* border-radius: 10px; */ padding: 12px 8px; } /* 🔹 Estilos para dispositivos móviles */ @media (max-width: 768px) { .menu-toggle { display: block; } .nav-links { position: absolute; top: 60px; left: 0; width: 100%; background: var(--color-verde-fuerte); display: none; flex-direction: column; text-align: center; padding: 20px 20px; } .nav-links li { margin: 15px 0; } .nav-links.active { display: flex; } .card { width: 100%; height: 100%; max-width: 300px; } } /* ====================================================== 🔹 BANNER PRINCIPAL ====================================================== */ .banner { width: 100%; min-height: 350px; /* Altura mínima en pantallas grandes */ position: relative; overflow: hidden; background: url(../images/fondo.jpg) center center no-repeat; background-size: cover; /* La imagen cubre el área manteniendo proporción */ background-position: center center; text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; top: 21px; } /* Ajustes para pantallas pequeñas */ @media (max-width: 768px) { .banner { min-height: 200px; /* Reducir altura en móviles */ background-size: contain; /* Asegura que la imagen se vea completa */ } } .banner-titulo { color: var(--blanco-marfil); margin-top: 40px; /* Reduce el margen superior */ margin-bottom: 10px; /* Reduce el margen inferior para acercarlo al subtítulo */ font-size: clamp(2.5rem, 5vw, 5rem); } .banner-subtitulo { color: var(--blanco-marfil); font-size: clamp(1.5rem, 3vw, 3rem); margin-top: 5px; /* Reduce el espacio superior del subtítulo */ } /* Ajustes específicos para móviles */ @media (max-width: 768px) { .banner-titulo { font-size: 2rem; /* Reduce el tamaño del título */ margin-top: 40px; margin-bottom: 15px; text-align: center; } .banner-subtitulo { font-size: 1.3rem; /* Reduce el tamaño del subtítulo */ text-align: center; } } @media (max-width: 480px) { .banner-titulo { font-size: 1.6rem; /* Aún más pequeño en pantallas muy pequeñas */ margin-top: 30px; margin-bottom: 10px; } .banner-subtitulo { font-size: 1rem; } } @media (max-width: 370px) { .banner-titulo { font-size: 1.2rem; /* Aún más pequeño en pantallas muy pequeñas */ margin-top: 30px; margin-bottom: 10px; } .banner-subtitulo { font-size: 0.8rem; } } .logo { width: 3rem; height: 3rem; border-radius: 10px; } main { max-width: 1200px; margin: auto; padding-top: 60px; padding-bottom: 10px; } section { margin-top: 10px; margin-bottom: 10px; } @keyframes fadeInDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } } @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } } /* @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } */ @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } } @keyframes slideIn { from { opacity: 0; transform: translateX(100%); } to { opacity: 1; transform: translateX(0); } } /* ====================================================== 🔹 BOTÓN DE SCROLL CIRCULAR ====================================================== */ #scroll-circular { position: fixed; bottom: 15px; left: 15px; border-radius: 50%; box-shadow: 5px 10px 15px var(--color-texto); display: flex; align-items: center; justify-content: center; z-index: 1; } #percent { border: 5px solid var(--color-fbk-btn); width: 70px; height: 70px; background: var(--color-fbk-btn-hover); border-radius: 50%; text-align: center; /* line-height:50px; innecesario por llevar display flex, el se encarga de la alineacion*/ font-size: 18px; /* Aumentado para mejor legibilidad */ font-weight: bold; color: #fff; /* color del texto */ display: flex; /*centrado y alineacion del texto*/ align-items: center; /*centrado y alineacion del texto*/ justify-content: center; /*centrado y alineacion del texto*/ } /* ====================================================== 🔹 SECCIONES GENERALES (Cursos, Biblioteca, etc.) ====================================================== */ .titulos-galerias { text-align: center; padding: 10px; height: 5rem; width: 100%; display: flex; justify-content: center; align-items: center; font-size: 24px; /* scroll-margin-top: 70px; scroll- navegacion -Ajusta según la altura de la barra - otra opcion usar codigo javascript*/ } /* #Inicio { background: var(--h3) } */ #Cursos, #Multimedia, #Contacto, #Biblioteca, #Tecnologia { background: var(--color-secundario); } /* ====================================================== 🔹 GALERÍA DE TARJETAS (Cursos, Biblioteca, etc.) ====================================================== */ .container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; /* flex-wrap -esto hace responsive las cards */ gap: 20px; } /* CARD */ .card { position: relative; height: 230px; width: 100%; max-width: 280px; margin: 15px 0px; border: 1px solid var(--color-hover); border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 3.5); display: flex; justify-content: center; align-items: center; overflow: hidden; /* oculta contenido, para despues mostrarlo con hover */ } /* .card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25); } */ .card img { width: 100%; height: auto; } .img img { object-fit: cover; object-position: center; } /* CONTENIDO */ .content { position: absolute; bottom: -100px; width: 100%; height: 100px; /*esto determina altura de conten. del hover */ display: flex; justify-content: center; align-items: center; flex-direction: column; backdrop-filter: blur(12px); transition: all 0.5s; } /*viene de linea 46 overflow: hidden y bottom -160 65 - muestra contenido al pasar mouse - oculta abajo luego lo sube */ .card:hover .content { bottom: 0; height: 170px;	/*esto determina altura de conten. del hover */ } /* TEXTO */ .content .text { display: flex; justify-content: center; align-items: center; flex-direction: column; margin-bottom: 10px; /* Reduce el espacio inferior entre el texto y los iconos */ } .text h3, .text span { color: #fff; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; font-size: 20px; text-align: center; transform: translateY(10px); /* posicion de texto verticalmente */ opacity: 0; /* oculta texto para jugar con hover */ transition: all 0.5s; } .text span { font-size: 12px; } .card:hover .text h3, .card:hover .text span { opacity: 1; /* muestra texto al pasar mouse */ } /* Botón para abrir el modal */ .openModalBtn { padding: 10px 20px; font-size: 16px; color: var(--color-fondo); background-color: var(--color-hover); border: none; border-radius: 5px; cursor: pointer; box-shadow: 0 5px 15px var(--link-a); transition: transform 0.2s ease, background-color 0.3s ease; } .openModalBtn:hover { color: var(--color-hover); background-color: var(--color-fondo); box-shadow: 0 5px 15px var(--color-hover); transform: scale(1.05); } /* ====================================================== 🔹 CONTACTO ====================================================== */ #contacto { padding: 3rem 1rem; background: var(--color-fondo); text-align: center; } #contacto h2 { font-size: 1.5rem; margin-bottom: 1.5rem; color: #2c3e50; } form { max-width: 600px; margin: 0 auto; } form input, form textarea { width: 100%; padding: 1rem; margin-bottom: 1rem; border: 1px solid var(--color-secundario); border-radius: 5px; } form button { padding: 10px 20px; font-size: 1.5rem; width: 300px; color: var(--color-verde-fuerte); background-color: var(--color-footer); /* border: none; */ border: 1px solid var(--color-verde-fuerte); border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; margin-bottom: 1rem; } form button:hover { color: var(--color-fondo); background-color: var(--color-hover); box-shadow: 0 5px 15px var(--h2); } /* ONDAS TIPO SONAR PARA EFECTO EN BOTON ENVIAR -SECCION CONTACTO */ .input-container-btnenviar { position: relative; display: inline-block; } .input-box { padding: 12px 15px; font-size: 24px; border-radius: 8px; outline: none; position: relative; transition: border-color 0.3s ease-in-out; } /* Contenedor de las ondas */ .sonar-waves { position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; transform: translate(-50%, -50%); pointer-events: none; } .wave { position: absolute; width: 100%; height: 100%; border: 2px solid #00bfae; border-radius: 8px; opacity: 0; animation: sonarWave 1.5s ease-out forwards; /* Aumento del tiempo para que sea más lento */ } @keyframes sonarWave { 0% { opacity: 1; transform: scaleX(1) scaleY(1); /* Empieza en el tamaño original */ } 50% { opacity: 0.5; transform: scaleX(1.2) scaleY(1.4); /* Expansión más notoria en la vertical */ } 100% { opacity: 0; transform: scaleX(1.4) scaleY(1.6); /* Expansión máxima en ambas direcciones */ } } /* ====================================================== 🔹 MAPA ====================================================== */ .map iframe { width: 100%; height: 300px; border: 2px solid var(--color-hover); /* Definir grosor, estilo y color */ border-radius: 10px; /* Bordes redondeados */ margin-top: 1rem; display: block; /* Asegurar que el iframe no tenga comportamientos extraños */ } /* ====================================================== 🔹 FOOTER ====================================================== */ .content { flex: 1; } .footer { background-color: var(--color-verde-fuerte); color: var(--blanco-marfil); padding: 20px 20px; text-align: center; } .footer-content { max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; /* justify-content: space-around; Distribuye los elementos de forma equitativa */ align-items: flex-start; /* Asegura que todos los títulos empiecen desde la misma línea */ text-align: center; /* Asegura alineación del texto dentro de cada bloque */ } .footer-logo { flex: 1; min-width: 150px; margin: 20px; } .footer-logo img { width: 150px; height: auto; } .footer-section { flex: 1; min-width: 200px; margin: 10px; } .footer-section h3 { cursor: pointer; background-color: var(--color-footer); padding: 12px; color: var(--color-texto); text-align: center; border-radius: 5px; transition: background 0.3s ease-in-out; position: relative; } /* Hover para resaltar el título */ .footer-section h3:hover { background-color: var(--color-secundario); } .footer-section p, .footer-section a { color: var(--blanco-marfil); margin-bottom: 10px; font-size: 15px; text-decoration: none; transition: color 0.3s; } .footer-section a:hover { color: var(--color-borde); } .footer-socials { display: flex; justify-content: center; } /* EFECTOS BICOLORES HOVER P ICONOS SVG REDES SOCIALES DEL FOOTER */ .footer-socials a { margin: 0 15px; /* color: var(--blanco-marfil); */ font-size: 24px; /* transition: color 0.3s, transform 0.3s; */ margin-bottom: 15px; } /* .footer-socials a:hover { color: var(--color-borde); transform: translateY(-5px); } */ @keyframes colorCycleTikTok { 0% { color: #25f4ee; } /* azul TikTok */ 50% { color: #ff0050; } /* rosa TikTok */ 100% { color: #25f4ee; } } @keyframes colorCycleFacebook { 0% { color: #1877f2; } /* azul Facebook */ 50% { color: #3b5998; } /* azul oscuro */ 100% { color: #1877f2; } } @keyframes colorCycleInstagram { 0% { color: #e1306c; } /* rosa */ 50% { color: #833ab4; } /* morado */ 100% { color: #e1306c; } } @keyframes colorCycleTwitter { 0% { color: #1da1f2; } /* azul claro */ 50% { color: #0e76a8; } /* azul más oscuro */ 100% { color: #1da1f2; } } /* Aplicación a los íconos */ .social-icon svg { transition: transform 0.3s ease; color: #999; /* Color base */ } .social-icon:hover svg { transform: scale(1.2); } /* Animaciones por red social */ .social-icon.tiktok:hover svg { animation: colorCycleTikTok 1.5s infinite; } .social-icon.facebook:hover svg { animation: colorCycleFacebook 1.5s infinite; } .social-icon.instagram:hover svg { animation: colorCycleInstagram 1.5s infinite; } .social-icon.twitter:hover svg { animation: colorCycleTwitter 1.5s infinite; } .footer-bottom { text-align: center; /* Centra el texto */ font-size: 14px; /* Tamaño de fuente adecuado */ padding: 10px; border-top: 1px solid #1abc9c; white-space: normal; /* Permite que el texto se divida en varias líneas */ word-wrap: break-word; /* Asegura que se ajuste en pantallas pequeñas */ } @media (max-width: 480px) { /* Se aplica en pantallas pequeñas */ .footer-bottom { max-width: 60%; /* Ajusta el ancho para forzar el salto de línea */ margin: 0 auto; /* Centra el contenido */ } } @media (max-width: 768px) { .footer-content { flex-direction: column; text-align: center; } .footer-section { width: 100%; } .footer-logo { display: flex; justify-content: center; align-items: center; width: 100%; /* Para que ocupe todo el ancho y se centre */ margin-bottom: 20px; /* Espaciado entre el logo y las secciones */ } .footer-logo img { max-width: 150px; /* Controla el tamaño del logo en móviles.-Ajusta el tamaño según sea necesario */ height: auto; } } .footer-content-collapsible { padding-top: 10px; } /* En dispositivos móviles (máx. 768px) las secciones estarán colapsadas */ @media (max-width: 768px) { .footer-content-collapsible { display: none; /* Se inicia oculto en móviles */ } .footer-section h3 { cursor: pointer; background-color: var(--color-footer); padding: 12px; /* color: var(--h2); */ text-align: center; border-radius: 5px; transition: background 0.3s ease-in-out; position: relative; } /* Icono de flecha */ .footer-section h3::after { content: " ▼"; /* Flecha hacia abajo */ font-size: 14px; margin-left: 10px; transition: transform 0.3s ease; } /* Cuando la sección está abierta */ .footer-section h3.active::after { transform: rotate(180deg); } /* Hover para resaltar el título */ .footer-section h3:hover { background-color: var(--color-secundario); } } /* En PC (más de 768px) siempre debe estar abierto */ @media (min-width: 769px) { .footer-content-collapsible { display: block !important; /* Siempre visible en PC */ } } .text { color: var(--blanco-marfil); text-align: center; margin-top: 15px; margin-bottom: 10px; font-size: 20px; } /* ====================================================== 🔹 BOTÓN DE WHATSAPP ====================================================== */ .btn-whatsapp { position: fixed; bottom: 14px; right: 20px; width: 70px; height: 70px; background-color: var(--color-boton-whatsapp); border-radius: 50%; border: 5px solid var(--color-footer); display: flex; align-items: center; justify-content: center; box-shadow: 5px 10px 15px var(--color-texto); transition: transform 0.3s ease-in-out; } .btn-whatsapp img { width: 40px; height: 40px; } .btn-whatsapp:hover { transform: scale(1.1); } /* ====================================================== 🔹 BOTON IR ARRIBA ====================================================== */ .btn-arriba { position: fixed; bottom: 95px; right: 20px; width: 70px; height: 70px; background: var(--color-sw-btn-hover); box-shadow: 5px 10px 15px var(--color-texto); /* color: var(--link-a); */ border: none; border-radius: 50%; font-size: 48px; cursor: pointer; display: none; align-items: center; justify-content: center; transition: transform 0.3s ease-in-out; border: 5px solid var(--color-sw-btn); } .btn-arriba:hover { transform: scale(1.1); } /* ====================================================== 🔹 MODALES (Ventanas emergentes) ====================================================== */ .modal { display: none; /* El modal está oculto por defecto */ position: fixed; z-index: 1; /* Asegura que el modal esté encima de otros elementos */ left: 0; top: 0; width: 100%; height: 100%; background-color: var(--color-texto); /* Fondo semitransparente */ overflow: auto; transition: opacity 0.5s ease-in-out; /* Transición suave */ } /* Estilos del contenido del modal */ .modal-content { background-color: var(--color-fondo); margin: 15% auto; /* Centra el modal en la pantalla */ padding: 20px; border-radius: 15px; width: 70%; max-width: 600px; box-shadow: 0px 5px 15px var(--color-secundario); animation: slideIn 0.5s ease-out; position: relative; } /* Animación de entrada */ @keyframes slideIn { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } } /* Estilo del botón de cierre */ .close { color: var(--nav-footer); font-size: 40px; font-weight: bold; position: absolute; top: 10px; right: 15px; cursor: pointer; } .close:hover, .close:focus { color: var(--parrafo); text-decoration: none; cursor: pointer; } /* Estilos del botón de WHATSAPP de la ventana emergente */ .BotonMod-wsp { display: flex; justify-content: center; align-items: center; background-color: var(--color-boton-whatsapp); /* Color de fondo de WhatsApp */ color: black; padding: 10px 20px; font-size: 1.5rem; border-radius: 15px; text-decoration: none; margin-top: 20px; transition: background-color 0.3s ease; box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); } /* Cambiar color de fondo al pasar el ratón */ .BotonMod-wsp:hover { background-color: var(--color-principal); color: var(--blanco-marfil); } /* Icono de WhatsApp dentro del botón */ .BotonMod-wsp-icon { width: 45px; height: 45px; margin-right: 10px; /* Espacio entre el icono y el texto */ border-radius: 25%; } @media (max-width: 378px) { .BotonMod-wsp { font-size: 1rem; } .BotonMod-wsp-icon { width: 25px; height: 25px; } } /* Estilos del botón de FACEBOOK de la ventana emergente */ .BotonMod-fbk { display: flex; justify-content: center; align-items: center; background-color: var(--color-fbk-btn); /* Color de fondo de WhatsApp */ color: black; padding: 10px 20px; font-size: 1.5rem; border-radius: 15px; text-decoration: none; margin-top: 20px; transition: background-color 0.3s ease; box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); } /* Cambiar color de fondo al pasar el ratón */ .BotonMod-fbk:hover { background-color: var(--color-fbk-btn-hover); color: var(--blanco-marfil); } /* Icono de facebook dentro del botón */ .BotonMod-fbk-icon { width: 45px; height: 45px; margin-right: 10px; /* Espacio entre el icono y el texto */ border-radius: 25%; } @media (max-width: 378px) { .BotonMod-fbk { font-size: 1rem; } .BotonMod-fbk-icon { width: 25px; height: 25px; } } /* Estilos del botón de SITIO WEB de la ventana emergente */ .BotonMod-sw { display: flex; justify-content: center; align-items: center; background-color: var(--color-sw-btn); /* Color de fondo de WhatsApp */ color: black; padding: 10px 20px; font-size: 1.5rem; border-radius: 15px; text-decoration: none; margin-top: 20px; transition: background-color 0.3s ease; box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); } /* Cambiar color de fondo al pasar el ratón */ .BotonMod-sw:hover { background-color: var(--color-sw-btn-hover); color: var(--blanco-marfil); } /* Icono de sitio web dentro del botón */ .BotonMod-sw-icon { width: 45px; height: 45px; margin-right: 10px; /* Espacio entre el icono y el texto */ border-radius: 25%; } @media (max-width: 378px) { .BotonMod-sw { font-size: 1rem; } .BotonMod-sw-icon { width: 25px; height: 25px; } } /* ====================================================== 🔹 SLIDER ====================================================== */ .slidertitulo { text-align: center; font-size: 24px; } /* CONTENEDOR SLIDER */ .slider-container { width: 100%; max-width: 1200px; margin: auto; overflow: hidden; position: relative; height: 170px; /* Ajusta según necesidad */ /* background-color: #EBFFED; */ background-color: var(--color-borde); display: flex; align-items: center; } /* SLIDER */ .slider { display: flex; align-items: center; width: max-content; animation: slideLeft 10s linear infinite; } /* SLIDE */ .slide { flex: 0 0 auto; width: 200px; /* Tamaño fijo */ margin-right: 40px; /* SEPARACIÓN ENTRE IMÁGENES */ align-items: center; /* width: 150px; */ text-align: center; } /* Eliminar margen en la última imagen */ .slide:last-child { margin-right: 0; } .slide img { width: 50%; height: 150px; object-fit: cover; border-radius: 10px; /* gap: 20px; */ padding-top: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); } .slide p { margin-top: 5px; font-size: 12px; color: #333; font-weight: bold; padding-bottom: 27px; } /* ANIMACIÓN DESPLAZAMIENTO IZQUIERDA DE FORMA CONTINUA*/ @keyframes slideLeft { from { transform: translateX(0); } to { transform: translateX(-50%); } } /* RESPONSIVE */ @media (max-width: 768px) { .slide img { height: 150px; } .slide p { font-size: 12px; } } /* ================================================ 🔹 FILTRO BUSQUEDAS POR CATEGORIA ================================================ */ section.filtrobusq { padding: 2rem; max-width: 1200px; margin: auto; } .filtro-bar { margin-bottom: 2rem; text-align: center; background: #ffffff; padding: 1rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); } .filtro-bar label { font-size: 1.1rem; font-weight: 600; margin-right: 0.5rem; color: #2c3e50; } .filtro-bar select { padding: 0.6rem 1rem; font-size: 1rem; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; transition: border-color 0.3s; } .filtro-bar select:focus { border-color: #2c3e50; outline: none; } .ocultanofiltro { display: none !important; } /* ================================================ 🔹 Mejorar imágenes (vividez y presentación) ================================================ */ .card .img img { filter: brightness(1.1) contrast(1.05) saturate(1.2); transition: transform 0.4s ease, filter 0.3s ease; border-radius: 10px; } .card:hover .img img { transform: scale(1.05); filter: brightness(1.2) contrast(1.1) saturate(1.3); }
+/* ======================================================
+   🔹 RESET CSS - Normaliza estilos en todos los navegadores
+   ====================================================== */
+
+   * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* scroll-behavior: smooth; */
+  }
+  
+  /* ======================================================
+	 🔹 VARIABLES GLOBALES - Colores y configuraciones generales
+	 ====================================================== */
+  
+  :root {
+	/*  Colores  */
+    --color-fondo: #e0f7e9; /* Verde muy leve */
+    --color-principal: #4caf50; /* Verde más intenso para elementos destacados */
+    --color-secundario: #81c784; /* Verde suave para botones */
+    --color-hover: #388e3c; /* Verde oscuro para hover en botones */
+    --color-texto: #333333; /* Color de texto principal */
+    --color-footer: #a5d6a7; /* Verde claro para el footer */
+    --color-borde: #c8e6c9; /* Verde muy suave para bordes */
+	--blanco-marfil: #FFFFF0;
+	--color-azul-claro: #ADD8E6; /* Azul claro */
+	--color-verde-fuerte: #006400;
+	--color-boton-whatsapp: #25d366;
+    --color-fbk-btn: #1e88e5; /* Color boton modal */
+    --color-fbk-btn-hover: #1565c0; /* Color boton modal al pasar el mouse */
+	--color-sw-btn: #FFB347; /* Color boton modal */
+    --color-sw-btn-hover: #FF8C00; /* Color boton modal al pasar el mouse */
+  }
+  
+  /*bloqueo de descarga de imagenes*/
+  
+  img {
+	pointer-events: none;	/* Deshabilita clic derecho */
+	user-drag: none;	/* Evita arrastrar la imagen */
+	-webkit-user-drag: none; /* Evita arrastrar la imagen en WebKit */
+    user-select: none; /* Evita la selección en algunos navegadores */
+	-webkit-user-drag: none;
+  }
+  
+  /* ======================================================
+	 🔹 CONFIGURACIONES HTML - BODY
+	 ====================================================== */
+  
+  /* efecto de movimiento al desplazarse por medio de los menus (para que no salte)*/
+  
+  html {
+	scroll-behavior: smooth;
+	/* width: 100%; */
+  }
+  
+  html,
+  body {
+	width: 100%;
+	overflow-x: hidden;
+	/* Oculta cualquier desbordamiento lateral */
+	background-color: var(--color-fondo);
+  }
+  
+  /* ======================================================
+	 🔹 CONFIGURACIONES GENERALES DEL BODY
+	 ====================================================== */
+  
+  body {
+	font-family: "Roboto", sans-serif;
+	line-height: 1.6;
+	/* color: var(--body-bg); */
+	overflow-x: hidden;
+	/* width: 100%; */
+  }
+  
+  /* ======================================================
+	 🔹 HEADER Y NAVBAR (Menú de navegación)
+	 ====================================================== */
+  
+  header {
+	/* background:  #333; */
+	color: #fff;
+	padding: 10px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+  }
+/*   
+  h1 {
+	color: var(--h1);
+  } */
+  
+  h2 {
+	color: var(--h2);
+  }
+  
+  h3 {
+	color: var(--h3);
+  }
+  
+  p {
+	color: var(--parrafo);
+  }
+  
+  .navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: var(--color-verde-fuerte);
+	padding: 15px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+  }
+  
+  .logo {
+	/* color: white; */
+	font-size: 24px;
+	font-weight: bold;
+  }
+  
+  .menu-toggle {
+	display: none;
+	background: none;
+	border: none;
+	font-size: 28px;
+	color: var(--color-fondo);
+	cursor: pointer;
+	padding-right: 10px;
+	/* mueve boton menu hamburguesa a la izquierda*/
+  }
+  
+  .nav-links {
+	list-style: none;
+	display: flex;
+  }
+  
+  .nav-links li {
+	margin: 0 7px;
+	/* Reducido el margen entre elementos */
+  }
+  
+  .nav-links li a {
+	text-decoration: none;
+	color: var(--color-fondo);
+	background: var(--color-principal);
+	font-size: 20px;
+	padding: 8px 0;
+	/* Ajustado para evitar que el padding horizontal altere el ancho */
+	transition: 0.3s;
+	border-radius: 10px;
+	width: 115px;
+	/* Fijamos un ancho uniforme */
+	display: inline-block;
+	/* Permite que el ancho se aplique correctamente */
+	text-align: center;
+	/* Centra el texto dentro del botón */
+  }
+  
+  .nav-links li a:hover {
+	color: var(--color-principal);
+	background: var(--color-fondo);
+	/* border-radius: 10px; */
+	padding: 12px 8px;
+  }
+  
+  /* 🔹 Estilos para dispositivos móviles */
+  
+  @media (max-width: 768px) {
+	.menu-toggle {
+	  display: block;
+	}
+	.nav-links {
+	  position: absolute;
+	  top: 60px;
+	  left: 0;
+	  width: 100%;
+	  background: var(--color-verde-fuerte);
+	  display: none;
+	  flex-direction: column;
+	  text-align: center;
+	  padding: 20px 20px;
+	}
+	.nav-links li {
+	  margin: 15px 0;
+	}
+	.nav-links.active {
+	  display: flex;
+	}
+	.card {
+	  width: 100%;
+	  height: 100%;
+	  max-width: 300px;
+	}
+  }
+
+
+
+  
+
+
+
+  /* ======================================================
+	 🔹 BANNER PRINCIPAL
+	 ====================================================== */
+  
+  .banner {
+    width: 100%;
+    min-height: 350px; /* Altura mínima en pantallas grandes */
+    position: relative;
+    overflow: hidden;
+    background: url(../images/fondo.jpg) center center no-repeat;
+    background-size: cover; /* La imagen cubre el área manteniendo proporción */
+    background-position: center center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    top: 21px;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .banner {
+        min-height: 200px; /* Reducir altura en móviles */
+        background-size: contain; /* Asegura que la imagen se vea completa */
+    }
+}
+
+.banner-titulo { 
+    color: var(--blanco-marfil);
+    margin-top: 40px; /* Reduce el margen superior */
+    margin-bottom: 10px; /* Reduce el margen inferior para acercarlo al subtítulo */
+    font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+.banner-subtitulo {
+    color: var(--blanco-marfil);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    margin-top: 5px; /* Reduce el espacio superior del subtítulo */
+}
+  
+/* Ajustes específicos para móviles */
+@media (max-width: 768px) {
+    .banner-titulo {
+        font-size: 2rem; /* Reduce el tamaño del título */
+        margin-top: 40px;
+        margin-bottom: 15px;
+        text-align: center;	
+    }
+
+    .banner-subtitulo {
+        font-size: 1.3rem; /* Reduce el tamaño del subtítulo */
+        text-align: center;	
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-titulo {
+        font-size: 1.6rem; /* Aún más pequeño en pantallas muy pequeñas */
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .banner-subtitulo {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 370px) {
+    .banner-titulo {
+        font-size: 1.2rem; /* Aún más pequeño en pantallas muy pequeñas */
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    .banner-subtitulo {
+        font-size: 0.8rem;
+    }
+}
+
+  .logo {
+	width: 3rem;
+	height: 3rem;
+	border-radius: 10px;
+  }
+    
+  main {
+	max-width: 1200px;
+	margin: auto;
+	padding-top: 60px;
+	padding-bottom: 10px;
+  }
+  
+  section {
+	margin-top: 10px;
+	margin-bottom: 10px;
+  }
+  
+  @keyframes fadeInDown {
+	from {
+	  opacity: 0;
+	  transform: translateY(-50px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  @keyframes fadeInUp {
+	from {
+	  opacity: 0;
+	  transform: translateY(50px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  /* @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+  } */
+
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  transform: scale(0.95);
+	}
+	to {
+	  opacity: 1;
+	  transform: scale(1);
+	}
+  }
+  
+
+  
+  @keyframes slideIn {
+	from {
+	  opacity: 0;
+	  transform: translateX(100%);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateX(0);
+	}
+  }
+  
+  /* ======================================================
+	 🔹 BOTÓN DE SCROLL CIRCULAR
+	 ====================================================== */
+  
+  #scroll-circular {
+	position: fixed;
+	bottom: 15px;
+	left: 15px;
+	border-radius: 50%;
+	box-shadow: 5px 10px 15px var(--color-texto);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+  }
+  
+  #percent {
+	border: 5px solid var(--color-fbk-btn);
+	width: 70px;
+	height: 70px;
+	background: var(--color-fbk-btn-hover);
+	border-radius: 50%;
+	text-align: center;
+	/* line-height:50px; innecesario por llevar display flex, el se encarga de la alineacion*/	
+	font-size: 18px;
+	/* Aumentado para mejor legibilidad */
+	font-weight: bold;
+	color: #fff;
+	/* color del texto */
+	display: flex;
+	/*centrado y alineacion del texto*/
+	align-items: center;
+	/*centrado y alineacion del texto*/
+	justify-content: center;
+	/*centrado y alineacion del texto*/
+  }
+  
+  /* ======================================================
+	 🔹 SECCIONES GENERALES (Cursos, Biblioteca, etc.)
+	 ====================================================== */
+  
+  .titulos-galerias {
+	text-align: center;
+	padding: 10px;
+	height: 5rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	/*  scroll-margin-top: 70px; scroll- navegacion -Ajusta según la altura de la barra - otra opcion usar codigo javascript*/
+  }
+  
+  /* #Inicio { background: var(--h3) } */
+  
+  #Cursos,
+  #Multimedia,
+  #Contacto, 
+  #Biblioteca,
+  #Tecnologia {
+	background: var(--color-secundario);
+  }
+  
+  
+  /* ======================================================
+	 🔹 GALERÍA DE TARJETAS (Cursos, Biblioteca, etc.)
+	 ====================================================== */
+  
+  .container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	/* flex-wrap -esto hace responsive las cards */
+	gap: 20px;
+  }
+  
+  /* CARD */
+  
+  .card {
+	position: relative;
+	height: 230px;
+	width: 100%;
+	max-width: 280px;
+	margin: 15px 0px;
+	border: 1px solid var(--color-hover);
+	border-radius: 15px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 3.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	/* oculta contenido, para despues mostrarlo con hover */
+  }
+  
+  /* .card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  } */
+
+  .card img {
+	width: 100%;
+	height: auto;
+  }
+  
+  .img img {
+	object-fit: cover;
+	object-position: center;
+  }
+  
+  /* CONTENIDO */
+  
+  .content {
+	position: absolute;
+	bottom: -100px;
+	width: 100%;
+	height: 100px;
+	/*esto determina altura de conten. del hover */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	backdrop-filter: blur(12px);
+	transition: all 0.5s;
+  }
+  
+  /*viene de linea 46 overflow: hidden y bottom -160 65 - muestra contenido al pasar mouse - oculta abajo luego lo sube */
+  
+  .card:hover .content {
+	bottom: 0;
+	height: 170px;	/*esto determina altura de conten. del hover */
+  }
+  
+  /* TEXTO */
+  
+  .content .text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 10px;
+	/* Reduce el espacio inferior entre el texto y los iconos */
+  }
+  
+  .text h3,
+  .text span {
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 20px;
+	text-align: center;
+	transform: translateY(10px);
+	/* posicion de texto verticalmente */
+	opacity: 0;
+	/* oculta texto para jugar con hover */
+	transition: all 0.5s;
+  }
+  
+  .text span {
+	font-size: 12px;
+  }
+  
+  .card:hover .text h3,
+  .card:hover .text span {
+	opacity: 1;
+	/* muestra texto al pasar mouse */
+  }
+  
+  /* Botón para abrir el modal */
+  
+  .openModalBtn {
+	padding: 10px 20px;
+	font-size: 16px;
+	color: var(--color-fondo);
+	background-color: var(--color-hover);
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0 5px 15px var(--link-a);	
+	transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .openModalBtn:hover {
+	color: var(--color-hover);
+	background-color: var(--color-fondo);
+	box-shadow: 0 5px 15px var(--color-hover);
+	transform: scale(1.05);
+  }
+  
+  /* ======================================================
+	 🔹 CONTACTO
+	 ====================================================== */
+  
+  #contacto {
+	padding: 3rem 1rem;
+	background: var(--color-fondo);
+	text-align: center;
+  }
+  
+  #contacto h2 {
+	font-size: 1.5rem;
+	margin-bottom: 1.5rem;
+	color: #2c3e50;
+  }
+  
+  form {
+	max-width: 600px;
+	margin: 0 auto;
+  }
+  
+  form input,
+  form textarea {
+	width: 100%;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border: 1px solid var(--color-secundario);
+	border-radius: 5px;
+  }
+  
+  form button {
+	padding: 10px 20px;
+	font-size: 1.5rem;
+	width: 300px;
+	color: var(--color-verde-fuerte);
+	background-color: var(--color-footer);
+	/* border: none; */
+	border: 1px solid var(--color-verde-fuerte);
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-bottom: 1rem;
+  }
+  
+  form button:hover {
+	color: var(--color-fondo);
+	background-color: var(--color-hover);
+	box-shadow: 0 5px 15px var(--h2);
+  }
+  
+
+  /* ONDAS TIPO SONAR PARA EFECTO EN BOTON ENVIAR -SECCION CONTACTO */
+  .input-container-btnenviar {
+	position: relative;
+	display: inline-block;
+}
+
+.input-box {
+	padding: 12px 15px;
+	font-size: 24px;
+	border-radius: 8px;
+	outline: none;
+	position: relative;
+	transition: border-color 0.3s ease-in-out;
+}
+
+/* Contenedor de las ondas */
+.sonar-waves {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+}
+
+.wave {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #00bfae;
+	border-radius: 8px;
+	opacity: 0;
+	animation: sonarWave 1.5s ease-out forwards; /* Aumento del tiempo para que sea más lento */
+}
+
+@keyframes sonarWave {
+	0% {
+		opacity: 1;
+		transform: scaleX(1) scaleY(1); /* Empieza en el tamaño original */
+	}
+	50% {
+		opacity: 0.5;
+		transform: scaleX(1.2) scaleY(1.4); /* Expansión más notoria en la vertical */
+	}
+	100% {
+		opacity: 0;
+		transform: scaleX(1.4) scaleY(1.6); /* Expansión máxima en ambas direcciones */
+	}
+}
+
+
+  /* ======================================================
+	 🔹 MAPA
+	 ====================================================== */
+  
+  .map iframe {
+	width: 100%;
+	height: 300px;
+	border: 2px solid var(--color-hover);
+	/* Definir grosor, estilo y color */
+	border-radius: 10px;
+	/* Bordes redondeados */
+	margin-top: 1rem;
+	display: block;
+	/* Asegurar que el iframe no tenga comportamientos extraños */
+  }
+  
+  /* ======================================================
+	 🔹 FOOTER
+	 ====================================================== */
+  
+  .content {
+	flex: 1;	
+  }
+  
+  .footer {
+	background-color: var(--color-verde-fuerte);
+	color: var(--blanco-marfil);
+	padding: 20px 20px;
+	text-align: center;
+  }
+  
+  .footer-content {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	/*  justify-content: space-around; Distribuye los elementos de forma equitativa */
+	align-items: flex-start;
+	/* Asegura que todos los títulos empiecen desde la misma línea */
+	text-align: center;
+	/* Asegura alineación del texto dentro de cada bloque */
+  }
+  
+  .footer-logo {
+	flex: 1;
+	min-width: 150px;
+	margin: 20px;
+  }
+  
+  .footer-logo img {
+	width: 150px;
+	height: auto;
+  }
+  
+  .footer-section {
+	flex: 1;
+	min-width: 200px;
+	margin: 10px;	
+  }
+  
+  .footer-section h3 {
+	cursor: pointer;
+	background-color: var(--color-footer);
+	padding: 12px;
+	color: var(--color-texto);
+	text-align: center;
+	border-radius: 5px;
+	transition: background 0.3s ease-in-out;
+	position: relative;
+  }
+  
+  /* Hover para resaltar el título */
+  
+  .footer-section h3:hover {
+	background-color: var(--color-secundario);
+  }
+  
+  .footer-section p,
+  .footer-section a {
+	color: var(--blanco-marfil);
+	margin-bottom: 10px;
+	font-size: 15px;
+	text-decoration: none;
+	transition: color 0.3s;	
+  }
+  
+  .footer-section a:hover {
+	color: var(--color-borde);
+  }
+  
+  .footer-socials {
+	display: flex;
+	justify-content: center;
+  }
+
+ /* EFECTOS BICOLORES HOVER P ICONOS SVG REDES SOCIALES DEL FOOTER */
+
+   .footer-socials a {
+	margin: 0 15px;
+	/* color: var(--blanco-marfil); */
+	font-size: 24px;
+	/* transition: color 0.3s, transform 0.3s; */
+	margin-bottom: 15px;
+  }
+  
+  /*
+  .footer-socials a:hover {
+	color: var(--color-borde);
+	transform: translateY(-5px);
+  } */
+  
+  @keyframes colorCycleTikTok {
+	0%   { color: #25f4ee; }   /* azul TikTok */
+	50%  { color: #ff0050; }   /* rosa TikTok */
+	100% { color: #25f4ee; }
+  }
+  
+  @keyframes colorCycleFacebook {
+	0%   { color: #1877f2; }   /* azul Facebook */
+	50%  { color: #3b5998; }   /* azul oscuro */
+	100% { color: #1877f2; }
+  }
+  
+  @keyframes colorCycleInstagram {
+	0%   { color: #e1306c; }   /* rosa */
+	50%  { color: #833ab4; }   /* morado */
+	100% { color: #e1306c; }
+  }
+  
+  @keyframes colorCycleTwitter {
+	0%   { color: #1da1f2; }   /* azul claro */
+	50%  { color: #0e76a8; }   /* azul más oscuro */
+	100% { color: #1da1f2; }
+  }
+  
+  /* Aplicación a los íconos */
+  .social-icon svg {
+	transition: transform 0.3s ease;
+	color: #999; /* Color base */
+  }
+  
+  .social-icon:hover svg {
+	transform: scale(1.2);
+  }
+  
+  /* Animaciones por red social */
+  .social-icon.tiktok:hover svg {
+	animation: colorCycleTikTok 1.5s infinite;
+  }
+  
+  .social-icon.facebook:hover svg {
+	animation: colorCycleFacebook 1.5s infinite;
+  }
+  
+  .social-icon.instagram:hover svg {
+	animation: colorCycleInstagram 1.5s infinite;
+  }
+  
+  .social-icon.twitter:hover svg {
+	animation: colorCycleTwitter 1.5s infinite;
+  }
+
+  
+
+
+  .footer-bottom {
+    text-align: center; /* Centra el texto */
+    font-size: 14px; /* Tamaño de fuente adecuado */
+    padding: 10px;
+	border-top: 1px solid #1abc9c;
+    white-space: normal; /* Permite que el texto se divida en varias líneas */
+    word-wrap: break-word; /* Asegura que se ajuste en pantallas pequeñas */
+}
+@media (max-width: 480px) { /* Se aplica en pantallas pequeñas */
+    .footer-bottom {
+        max-width: 60%; /* Ajusta el ancho para forzar el salto de línea */
+        margin: 0 auto; /* Centra el contenido */
+    }
+}
+  
+  @media (max-width: 768px) {
+	.footer-content {
+	  flex-direction: column;
+	  text-align: center;
+	}
+	.footer-section {
+	  width: 100%;
+	}
+	.footer-logo {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 100%;
+	  /* Para que ocupe todo el ancho y se centre */
+	  margin-bottom: 20px;
+	  /* Espaciado entre el logo y las secciones */
+	}
+	.footer-logo img {
+	  max-width: 150px;
+	  /* Controla el tamaño del logo en móviles.-Ajusta el tamaño según sea necesario */
+	  height: auto;
+	}
+  }
+  
+  .footer-content-collapsible {
+	padding-top: 10px;
+  }
+
+  /* En dispositivos móviles (máx. 768px) las secciones estarán colapsadas */
+  
+  @media (max-width: 768px) {
+	.footer-content-collapsible {
+	  display: none;
+	  /* Se inicia oculto en móviles */
+	}
+	.footer-section h3 {
+	  cursor: pointer;
+	  background-color: var(--color-footer);
+	  padding: 12px;
+	  /* color: var(--h2); */
+	  text-align: center;
+	  border-radius: 5px;
+	  transition: background 0.3s ease-in-out;
+	  position: relative;
+	}
+	/* Icono de flecha */
+	.footer-section h3::after {
+	  content: " ▼";
+	  /* Flecha hacia abajo */
+	  font-size: 14px;
+	  margin-left: 10px;
+	  transition: transform 0.3s ease;
+	}
+	/* Cuando la sección está abierta */
+	.footer-section h3.active::after {
+	  transform: rotate(180deg);
+	}
+	/* Hover para resaltar el título */
+	.footer-section h3:hover {
+	  background-color: var(--color-secundario);
+	}
+  }
+  
+  /* En PC (más de 768px) siempre debe estar abierto */
+  
+  @media (min-width: 769px) {
+	.footer-content-collapsible {
+	  display: block !important;
+	  /* Siempre visible en PC */
+	}
+  }
+  
+  .text {
+	color: var(--blanco-marfil);
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-size: 20px;
+  }
+  
+  /* ======================================================
+	 🔹 BOTÓN DE WHATSAPP
+	 ====================================================== */
+  
+  .btn-whatsapp {
+	position: fixed;
+	bottom: 14px;
+	right: 20px;
+	width: 70px;
+	height: 70px;
+	background-color: var(--color-boton-whatsapp);
+	border-radius: 50%;
+	border: 5px solid var(--color-footer);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 5px 10px 15px var(--color-texto);
+	transition: transform 0.3s ease-in-out;
+  }
+  
+  .btn-whatsapp img {
+	width: 40px;
+	height: 40px;
+  }
+  
+  .btn-whatsapp:hover {
+	transform: scale(1.1);
+  }
+  
+    /* ======================================================
+	 🔹 BOTON IR ARRIBA
+	 ====================================================== */
+
+  .btn-arriba {
+	position: fixed;
+	bottom: 95px;
+	right: 20px;
+	width: 70px;
+	height: 70px;
+	background: var(--color-sw-btn-hover);
+	box-shadow: 5px 10px 15px var(--color-texto);
+	/* color: var(--link-a); */
+	border: none;
+	border-radius: 50%;
+	font-size: 48px;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	transition: transform 0.3s ease-in-out;
+	border: 5px solid var(--color-sw-btn);
+  }
+  
+  .btn-arriba:hover {
+	transform: scale(1.1);
+  }
+  
+  /* ======================================================
+	 🔹 MODALES (Ventanas emergentes)
+	 ====================================================== */
+  
+  .modal {
+	display: none;
+	/* El modal está oculto por defecto */
+	position: fixed;
+	z-index: 1;
+	/* Asegura que el modal esté encima de otros elementos */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color-texto);
+	/* Fondo semitransparente */
+	overflow: auto;
+	transition: opacity 0.5s ease-in-out;
+	/* Transición suave */
+  }
+  
+ 
+  /* Estilos del contenido del modal */
+  
+  .modal-content {
+	background-color: var(--color-fondo);
+	margin: 15% auto;
+	/* Centra el modal en la pantalla */
+	padding: 20px;
+	border-radius: 15px;
+	width: 70%;
+	max-width: 600px;
+	box-shadow: 0px 5px 15px var(--color-secundario);
+	animation: slideIn 0.5s ease-out;
+	position: relative;
+  }
+  
+  /* Animación de entrada */
+  
+  @keyframes slideIn {
+	from {
+	  transform: translateY(-100%);
+	  opacity: 0;
+	}
+	to {
+	  transform: translateY(0);
+	  opacity: 1;
+	}
+  }
+  
+  /* Estilo del botón de cierre */
+  
+  .close {
+	color: var(--nav-footer);
+	font-size: 40px;
+	font-weight: bold;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: var(--parrafo);
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  /* Estilos del botón de WHATSAPP de la ventana emergente */
+  
+  .BotonMod-wsp {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-boton-whatsapp);
+	/* Color de fondo de WhatsApp */
+	color: black;
+	padding: 10px 20px;
+	font-size: 1.5rem;
+	border-radius: 15px;
+	text-decoration: none;
+	margin-top: 20px;
+	transition: background-color 0.3s ease;
+	box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Cambiar color de fondo al pasar el ratón */
+  
+  .BotonMod-wsp:hover {
+	background-color: var(--color-principal);
+	color: var(--blanco-marfil);
+  }
+  
+  /* Icono de WhatsApp dentro del botón */
+  
+  .BotonMod-wsp-icon {
+	width: 45px;
+	height: 45px;
+	margin-right: 10px;
+	/* Espacio entre el icono y el texto */
+	border-radius: 25%;
+  }
+  
+  @media (max-width: 378px) {
+	.BotonMod-wsp {
+	  font-size: 1rem;
+	}
+	.BotonMod-wsp-icon {
+	  width: 25px;
+	  height: 25px;
+	}
+  }
+  
+  /* Estilos del botón de FACEBOOK de la ventana emergente */
+  
+  .BotonMod-fbk {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-fbk-btn);
+	/* Color de fondo de WhatsApp */
+	color: black;
+	padding: 10px 20px;
+	font-size: 1.5rem;
+	border-radius: 15px;
+	text-decoration: none;
+	margin-top: 20px;
+	transition: background-color 0.3s ease;
+	box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Cambiar color de fondo al pasar el ratón */
+  
+  .BotonMod-fbk:hover {
+	background-color: var(--color-fbk-btn-hover);
+	color: var(--blanco-marfil);
+  }
+  
+  /* Icono de facebook dentro del botón */
+  
+  .BotonMod-fbk-icon {
+	width: 45px;
+	height: 45px;
+	margin-right: 10px;
+	/* Espacio entre el icono y el texto */
+	border-radius: 25%;
+  }
+  
+  @media (max-width: 378px) {
+	.BotonMod-fbk {
+	  font-size: 1rem;
+	}
+	.BotonMod-fbk-icon {
+	  width: 25px;
+	  height: 25px;
+	}
+  }
+  
+  /* Estilos del botón de SITIO WEB de la ventana emergente */
+  
+  .BotonMod-sw {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-sw-btn);
+	/* Color de fondo de WhatsApp */
+	color: black;
+	padding: 10px 20px;
+	font-size: 1.5rem;
+	border-radius: 15px;
+	text-decoration: none;
+	margin-top: 20px;
+	transition: background-color 0.3s ease;
+	box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+  }
+  
+  /* Cambiar color de fondo al pasar el ratón */
+  
+  .BotonMod-sw:hover {
+	background-color: var(--color-sw-btn-hover);
+	color: var(--blanco-marfil);
+  }
+  
+  /* Icono de sitio web dentro del botón */
+  
+  .BotonMod-sw-icon {
+	width: 45px;
+	height: 45px;
+	margin-right: 10px;
+	/* Espacio entre el icono y el texto */
+	border-radius: 25%;
+  }
+  
+  @media (max-width: 378px) {
+	.BotonMod-sw {
+	  font-size: 1rem;
+	}
+	.BotonMod-sw-icon {
+	  width: 25px;
+	  height: 25px;
+	}
+  }
+  
+  /* ======================================================
+	 🔹 SLIDER
+	 ====================================================== */
+
+  .slidertitulo {
+	text-align: center;
+	font-size: 24px;
+  }
+  
+  /* CONTENEDOR SLIDER */
+  
+  .slider-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+	height: 170px;
+	/* Ajusta según necesidad */
+	/* background-color: #EBFFED; */
+	background-color: var(--color-borde);
+	display: flex;
+	align-items: center;
+  }
+  
+  /* SLIDER */
+  
+  .slider {
+	display: flex;
+	align-items: center;
+	width: max-content;
+	animation: slideLeft 10s linear infinite;
+  }
+  
+  /* SLIDE */
+  
+  .slide {
+	flex: 0 0 auto;
+	width: 200px;
+	/* Tamaño fijo */
+	margin-right: 40px;
+	/* SEPARACIÓN ENTRE IMÁGENES */
+
+	align-items: center;
+	/* width: 150px; */
+	text-align: center;
+
+  }
+  
+  /* Eliminar margen en la última imagen */
+  
+  .slide:last-child {
+	margin-right: 0;
+  }
+  
+  .slide img {
+	width: 50%;
+	height: 150px;
+	object-fit: cover;
+	border-radius: 10px;
+	/* gap: 20px; */
+
+	padding-top: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .slide p {
+	margin-top: 5px;
+	font-size: 12px;
+	color: #333;
+	font-weight: bold;
+
+	padding-bottom: 27px;
+}
+
+
+  
+  /* ANIMACIÓN DESPLAZAMIENTO IZQUIERDA DE FORMA CONTINUA*/
+  
+  @keyframes slideLeft {
+	from {
+	  transform: translateX(0);
+	}
+	to {
+	  transform: translateX(-50%);
+	}
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 768px) {
+	.slide img {
+	  height: 150px;
+	}
+	.slide p {
+		font-size: 12px;
+	}
+  }
+  
+  /* ================================================
+	 🔹 FILTRO BUSQUEDAS POR CATEGORIA
+	 ================================================ */
+  
+section.filtrobusq {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .filtro-bar {
+    margin-bottom: 2rem;
+    text-align: center;
+    background: var(--color-borde);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);	
+  }
+  .filtro-bar label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: var(--color-verde-fuerte);
+  }
+  .filtro-bar select {
+    padding: 0.6rem 1rem;
+    font-size: 1.3rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+	color: var(--color-verde-fuerte);
+  }
+  .filtro-bar select:focus {
+    border-color: var(--color-verde-fuerte);
+    outline: none;
+  }
+
+  .ocultanofiltro {
+    display: none !important;
+  }
+  
+
+  /* ================================================
+	 🔹 Mejorar imágenes (vividez y presentación)
+	 ================================================ */
+
+  .card .img img {
+	filter: brightness(1.1) contrast(1.05) saturate(1.2);
+	transition: transform 0.4s ease, filter 0.3s ease;
+	border-radius: 10px;
+  }
+  
+  .card:hover .img img {
+	transform: scale(1.05);
+	filter: brightness(1.2) contrast(1.1) saturate(1.3);
+  }
+  

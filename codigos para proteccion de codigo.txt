@@ -10,6 +10,8 @@ https://kangax.github.io/html-minifier/
 ✅ Compatible con HTML5.
 ✅ Soporta inline CSS y JS dentro del HTML.
 
+usar este para HTML:
+https://www.phpkobo.com/html-obfuscator
 
 🔹 2. Obfuscator.io (JavaScript)  https://obfuscator.io/
 ✅ Ofusca HTML y CSS haciéndolos menos legibles.

@@ -1,10 +1,82 @@
 fuente-landing academia
 
 
+ADECUAR PUBLICIDAD DEJAR MAS CLARO QUE SE ESTA VENDIENDO
+EN SITIO WEB - KITAR LINK DEL SITIO
+AGREGAR CORREO Y TELEFONO A SITIO WEB DE PAKETES
+PROFESIONALIZAR TODOS LOS PARRAFOS P VENTAS -PERSUADIR A COMPRAR
 
-1239 lineas
 
 
+hacer cuentas de tiktoix inbstagram
+EN FACE ADECUAR PARRAFO PARA INIVTARLOS A SEGUIR Y COMPARTIR LA PAGINA 
+-----PORQUE YA ESTAN EN LA PAGINA
+
+SINCRONIZAR WEB Y REDES SOCIALES CON LOS LINK Y LOS PAKETES
+INSTAGRAM....  @innovacion_y_saber
+TIKTOK....  www.tiktok.com/@innovacion_y_saber
+
+MEJORAR CARGA Y VELOCIDAD DE PAGINAS EN NAVEGADOR:
+imágenes como: .png
+🔹 Recomendaciones:
+Pásalas a formato .webp (puede reducir el peso hasta un 80%).
+Usa un tamaño de máximo 800px de ancho (suficiente para tarjetas).
+Comprime con https://tinypng.com/ o  https://squoosh.app/
+
+Usa loading="lazy" en imágenes
+Modifica los <img> así:
+<img src="images/fotojuridico.webp=" loading="lazy" alt="">
+
+ Reduce fuentes y librerías externas
+Estás cargando:
+<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+🔹 Recomendación:
+Puedes integrar Normalize en tu CSS principal si solo lo usas parcialmente.
+Considera usar íconos SVG directamente en lugar de Font Awesome (más rápido y liviano).
+
+conversoina webp     https://www.freeconvert.com/es
+###########################
+
+🔹 Versiones cortas para banners móviles:
+Aprende sin complicaciones. A tu ritmo.
+Contenido útil, rápido y accesible.
+Cursos y formatos para gente ocupada.
+Tu crecimiento empieza aquí.
+Fácil de entender. Listo para descargar.
+
+🔘 Frases para botones y llamados a la acción:
+Descargar ahora
+
+Empezar a aprender
+Ver productos
+Quiero superarme
+Explorar contenido
+¡Lo necesito!
+Aprende sin límites
+Tu oportunidad está aquí
+Empieza hoy mismo
+Ir al catálogo
+
+#############################
+Para el banner principal de tu sitio web, te propongo el siguiente texto, adaptado al tono empático y motivador que buscas:
+
+📚 Aprende a tu ritmo, sin complicaciones ni gastos excesivos
+Cursos y formatos digitales listos para descargar
+Diseñados para personas trabajadoras, amas de casa, emprendedores y quienes desean superarse sin dejar su rutina.
+Acceso inmediato, pago único y contenido que puedes usar cuantas veces necesites.
+Invierte en ti. Tu momento de crecer es ahora.​
+
+Este mensaje destaca la accesibilidad y conveniencia de tus productos, alineándose con las necesidades de tu audiencia objetivo. Si deseas, puedo ayudarte a adaptar este texto para otros formatos o secciones de tu sitio web.
+
+------------------
+resumen:
+📚 Aprende a tu ritmo, sin complicaciones ni grandes gastos
+Cursos y formatos digitales listos para descargar.
+Perfectos para personas ocupadas que quieren superarse.
+💡 Acceso inmediato, pago único y uso ilimitado.
+
+####################################################
 
 slider kitar caricaturas, poner imagenes reales
 darle altura al fondo del slider
@@ -117,3 +189,12 @@ Es  decir, hemos conseguido que el elemento con la clase container sea responsiv
         background-color: lightgray;
     }
 }
+
+
+
+
+
+
+
+
+

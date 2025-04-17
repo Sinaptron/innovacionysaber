@@ -6,9 +6,11 @@ EN SITIO WEB - KITAR LINK DEL SITIO
 AGREGAR CORREO Y TELEFONO A SITIO WEB DE PAKETES
 PROFESIONALIZAR TODOS LOS PARRAFOS P VENTAS -PERSUADIR A COMPRAR
 
+titulo a menu hamburg
+flechita de filtro hacer mas garnde y color
 
 
-hacer cuentas de tiktoix inbstagram
+
 EN FACE ADECUAR PARRAFO PARA INIVTARLOS A SEGUIR Y COMPARTIR LA PAGINA 
 -----PORQUE YA ESTAN EN LA PAGINA
 
@@ -198,6 +200,8 @@ Es  decir, hemos conseguido que el elemento con la clase container sea responsiv
         background-color: lightgray;
     }
 }
+
+
 
 
 

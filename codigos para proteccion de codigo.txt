@@ -4,14 +4,19 @@ teclas F12, Ctrl+Shift+I, Ctrl+Shift+J, y Ctrl+U
 codificar archivos para que no sean legibles:
 javascript html y css - con herramientas:
 
+usar este para HTML:
+https://www.phpkobo.com/html-obfuscator
+usar este para CSS:
+https://kangax.github.io/html-minifier/
+usar este para JS:
+https://obfuscator.io/
+
+
 🔹 1. HTML Minifier (Minificación de HTML y CSS)
 https://kangax.github.io/html-minifier/
 ✅ Reduce el tamaño de archivos HTML y CSS eliminando espacios, comentarios y código innecesario.
 ✅ Compatible con HTML5.
 ✅ Soporta inline CSS y JS dentro del HTML.
-
-usar este para HTML:
-https://www.phpkobo.com/html-obfuscator
 
 🔹 2. Obfuscator.io (JavaScript)  https://obfuscator.io/
 ✅ Ofusca HTML y CSS haciéndolos menos legibles.

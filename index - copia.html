@@ -18,28 +18,34 @@
 </head>
 
 
-<body>
+<!-- <body> -->
 
-<!-- <body oncontextmenu="return false" onkeydown="return false"> -->
+<body oncontextmenu="return false" onkeydown="return false">
 	<!-- codigo dentro del body evita descargar imagen y bloquea visualizacion de codigo -->
 
 <!-- 🔹 SECCION HEADER - NAV -->
 
-    <header>
-		<nav class="navbar">
-			<img src="images/logonexdig.png" class="logo" alt="Logo">
-			<!-- <div class="logo">MiWeb</div> -->
-			<button class="menu-toggle" id="menu-toggle">&#9776;</button>
-			<ul class="nav-links" id="nav-links">
-				<li><a href="#Inicio">Inicio</a></li>
-				<li><a href="#Cursos">Cursos</a></li>
-				<li><a href="#Biblioteca">Biblioteca</a></li>
-				<li><a href="#Multimedia">Multimedia</a></li>
-				<li><a href="#Tecnologia">Tecnologia</a></li>
-				<li><a href="#Contacto">Contacto</a></li>
-			</ul>
-		</nav>
-	</header>
+<header>
+	<nav class="navbar">
+		<img src="images/logonexdig.png" class="logo" alt="Logo">
+		<!-- <div class="logo">MiWeb</div> -->
+		<button class="menu-toggle" id="menu-toggle">&#9776;</button>
+		<ul class="nav-links" id="nav-links">
+			<li><a href="#Inicio">Inicio</a></li>
+			<li><a href="#Cursos">Cursos</a></li>
+			<li><a href="#Biblioteca">Biblioteca</a></li>
+			<li><a href="#Multimedia">Multimedia</a></li>
+			<li><a href="#Tecnologia">Tecnologia</a></li>
+			<li><a href="#Contacto">Contacto</a></li>
+		</ul>
+	</nav>
+</header>
+  
+  
+  
+  
+  
+  
 
 	<!-- fondo al abrir el menu hamburger -->
 	<!-- <div class="overlay"></div> -->
@@ -53,10 +59,6 @@
 
 		<div id="Inicio"></div>
 
-
-
-
-
 <!-- 🔹 SECCION BANNER -->
 		<div class="banner">
 			<h1 class="banner-titulo">Innovacion y Saber</h1>
@@ -69,14 +71,14 @@
 		<!-- 🔹 SECCION PARA FILTRAR BUSQUEDA -->
 		<section class="filtrobusq">
 			<div class="filtro-bar">
-			  <label for="category">Filtrar por categoría:</label>
+			  <label for="category">Filtrar por Tema:</label>
 			  <select id="category">
 				<option value="all">Todos</option>
 				<option value="bebidas">Bebidas</option>        
 				<option value="cocina">Cocina</option>
 				<option value="ciberseguridad">Ciber-Hacking</option>
 				<option value="esoterico">Esoterismo</option>
-				<option value="espiritualidad">Espiritualidad</option>
+				<option value="espiritual">Espiritualidad</option>
 				<option value="legal">Legal</option>
 				<option value="mascotas">Mascotas</option>
 				<option value="oficios">Oficios</option>
@@ -239,7 +241,7 @@
 
 
 			<!-- Tarjeta 2 -->
-			<div class="card" data-category="oficios">
+			<div class="card" data-category="bebidas">
 				<div class="img">
 					<img src="images/fotobartender.png" loading="lazy" alt="">
 				</div>
@@ -529,7 +531,7 @@
 			</div>
 
 			<!-- Tarjeta 6 -->
-			<div class="card" data-category="superacion">
+			<div class="card" data-category="espiritual">
 				<div class="img">
 					<img src="images/fotosecreto.png" loading="lazy" alt="">
 				</div>
@@ -1280,7 +1282,7 @@
 			</div>
 
 			<!-- Tarjeta 16 -->
-			<div class="card" data-category="superacion">
+			<div class="card" data-category="espiritual">
 				<div class="img">
 					<img src="images/fotoduelo.png" loading="lazy" alt="">
 				</div>
@@ -1467,7 +1469,7 @@
 			</div>
 
 			<!-- Tarjeta 2 -->
-			<div class="card" data-category="esoterismo">
+			<div class="card" data-category="esoterico">
 				<div class="img">
 					<img src="images/fotobiblioesoter.png" loading="lazy" alt="">
 				</div>
@@ -1791,11 +1793,13 @@
 			<div class="modal">
 				<div class="modal-content">
 					<span class="close">&times;</span>
-					<h2>AUDIOLIBROS</h2>
+					<h2>SUPER PACK AUDIOLIBROS</h2>
+					<br>
 					<p>🎵 ¿Cansado de la vista por leer? Aprovecha esta promoción de audiolibros y aprende de los mejores BEST SELLERS motivacionales, de desarrollo personal, finanzas, psicología, ventas, autoayuda y muchos temas más con los mejores autores.</p>
 					<p>🎵 Disfruta de ellos en dónde quieras, mientras conduces, en el gimnasio o mientras realizas otras tareas.</p>
 					<p>🎵 ¡No pares de aprender!</p>
 					<p>🎵 Adquiérelo hoy, ¡Aprovecha esta oportunidad única! te ofrecemos acceso a más de 3,800 archivos de AUDIOLIBROS de diferentes temáticas Y AUTORES RECONOCIDOS.</p>
+					<br>
 					<p> Incluyendo:</p>
 					<p>🎧 alex dey</p>
 					<p>🎧 camilo cruz</p>
@@ -1849,16 +1853,16 @@
 			</div>
 
 			<!-- Tarjeta 2 -->
-			<div class="card" data-category="mascotas">
+			<div class="card" data-category="oficios">
 				<div class="img">
-					<img src="images/fotoaudio.png" loading="lazy" alt="">
+					<img src="images/fotodigipro.png" loading="lazy" alt="">
 				</div>
 				<div class="content">
 					<div class="text">
-						<h3>en construccion</h3>
-						<span>pdte subir informacion</span>
+						<h3>FOTOGRAFIA DIGITAL</h3>
+						<span>Usa tu camara como un PRO</span>
 					</div>
-					<!-- <button class="openModalBtn">Mas Información</button> -->
+					<button class="openModalBtn">Mas Información</button>
 				</div>
 			</div>
 
@@ -1866,8 +1870,25 @@
 			<div class="modal">
 				<div class="modal-content">
 					<span class="close">&times;</span>
-					<h2>PAQUETE </h2>
-
+					<h2>FOTOGRAFIA DIGITAL</h2>
+<br>
+<p>🎯 Domina tu cámara y captura el mundo como lo ves</p>
+<p>🎯 ¿Tienes una cámara pero no sabes cómo sacarle provecho?</p>
+<p>📸 ¿Te ha pasado que compras una cámara pensando en tomar fotos increíbles... pero terminas usándola solo en modo automático?</p>
+<p>👉 Con este producto digital aprenderás paso a paso a:</p>
+<p>📸 Conocer tu cámara como un profesional (¡sin tecnicismos!)</p>
+<p>📸 Dominar la luz, el enfoque y la composición</p>
+<p>📸 Usar el modo manual con confianza</p>
+<p>📸 Tomar fotos artísticas, retratos, paisajes o producto</p>
+<p>📸 Usar el modo manual con confianza</p>
+<p>📸 Tomar fotos artísticas, retratos, paisajes o producto</p>
+<p>✔️ Explicado en lenguaje simple</p>
+<p>✔️ Para principiantes y entusiastas</p>
+<p>✔️ 100% digital y puedes verlo desde tu celular</p>
+<p>✔️ Ideal si quieres convertir tu hobby en ingreso</p>
+<p>✔️ ¡No necesitas experiencia previa! Solo tu cámara, tu curiosidad y este curso.</p>
+<p>🛒  Disponible ahora a un precio promocional por tiempo limitado.</p>
+<p>📥  Descárgalo hoy y empieza a tomar fotos como un profesional</p>
 
 					<br>
 					<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
@@ -1897,16 +1918,16 @@
 			</div>
 
 			<!-- Tarjeta 3 -->
-			<div class="card" data-category="mascotas">
+			<div class="card" data-category="oficios">
 				<div class="img">
-					<img src="images/fotoaudio.png" loading="lazy" alt="">
+					<img src="images/fotodigimovil.png" loading="lazy" alt="">
 				</div>
 				<div class="content">
 					<div class="text">
-						<h3>en construccion</h3>
-						<span>pdte subir informacion</span>
+						<h3>FOTOGRAFIA MOVIL</h3>
+						<span>Tu celular como cámara profesional</span>
 					</div>
-					<!-- <button class="openModalBtn">Mas Información</button> -->
+					<button class="openModalBtn">Mas Información</button>
 				</div>
 			</div>
 
@@ -1914,8 +1935,24 @@
 			<div class="modal">
 				<div class="modal-content">
 					<span class="close">&times;</span>
-					<h2>PAQUETE </h2>
-
+					<h2>FOTOGRAFIA DIGITAL CON MOVIL</h2>
+<br>
+<p>🎯 Convierte tu celular en una cámara profesional</p>
+<p>🎯 ¿Sabías que no necesitas una cámara profesional para tomar fotos increíbles?</p>
+"<p>🎯 Hoy en día no se trata del equipo, sino del conocimiento.
+Aprende a tomar fotos impactantes con tu celular: retratos, productos, paisajes y más.</p>"
+<p>👉 Con este producto digital aprenderás:</p>
+<p>📸 Los secretos de la luz, el ángulo y la composición</p>
+<p>📸 Técnicas para que tus fotos parezcan de cámara profesional</p>
+<p>📸 Tips para Instagram, negocios, viajes o portafolios </p>
+<p>📸 No necesitas experiencia</p>
+<p>📸 Solo tu celular y ganas de aprender</p>
+<p>📸 Ideal para redes, emprendimientos y creadores de contenido</p>
+<p>📸 Aprende a tu ritmo y sin complicaciones</p>
+<p>📲  Descarga el curso y lleva tus fotos al siguiente nivel</p>
+<p>🎉  ¡Conviértete en el fotógrafo de tu negocio o tu vida diaria!</p>
+<p>💬  Escríbeme y empieza hoy por un precio accesible</p>
+				
 					<br>
 					<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
 					<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</P>
@@ -1944,16 +1981,16 @@
 			</div>
 
 			<!-- Tarjeta 4 -->
-			<div class="card" data-category="mascotas">
+			<div class="card" data-category="superacion">
 				<div class="img">
-					<img src="images/fotoaudio.png" loading="lazy" alt="">
+					<img src="images/fotocreajuego.png" loading="lazy" alt="">
 				</div>
 				<div class="content">
 					<div class="text">
-						<h3>en construccion</h3>
-						<span>pdte subir informacion</span>
+						<h3>CREACION DE VIDEOJUEGOS</h3>
+						<span>No necesitas experiencia.</span>
 					</div>
-					<!-- <button class="openModalBtn">Mas Información</button> -->
+					<button class="openModalBtn">Mas Información</button>
 				</div>
 			</div>
 
@@ -1961,8 +1998,45 @@
 			<div class="modal">
 				<div class="modal-content">
 					<span class="close">&times;</span>
-					<h2>PAQUETE</h2>
-
+					<h2>MEGAPAQUETE PARA CREAR VIDEOJUEGOS</h2>
+					<br>
+					<p>🎮 Crea tus propios videojuegos desde cero, sin ser experto en programación</p>
+					<p>🎮 ¿Siempre soñaste con crear tu propio videojuego?	No necesitas ser programador ni tener experiencia.
+					Solo necesitas una guía clara… y este curso es el comienzo. </p>
+					<p>🎮 Hoy, crear videojuegos no es solo para ingenieros o grandes estudios.</p>
+					<p>🕹️ Tú también puedes aprender, paso a paso, desde cero y con herramientas accesibles.</p>
+					<p>👉 Con este producto digital aprenderás a:</p>
+					<p>🕹️ Diseñar personajes y niveles desde cero</p>
+					<p>🕹️ Usar motores de juegos como Unity o Godot</p>
+					<p>🕹️ Crear tu primer juego jugable (sin frustrarte)</p>
+					<p>✅  Ideal para jóvenes, gamers, autodidactas y creativos</p>
+					<p>✅  No necesitas saber programar</p>
+					<p>✅  100% digital, con ejercicios y ejemplos</p>
+					<p>✅  Aprende en tu tiempo libre y a tu ritmo</p>
+					<p>🎯 ¡Convierte tu pasión por los videojuegos en una habilidad real y rentable!</p>
+					<p>🕹️ Descárgalo hoy y empieza a construir tu primer videojuego</p>
+					<p>✅  100% digital, con ejercicios y ejemplos</p>
+					<p>✅  Aprende en tu tiempo libre y a tu ritmo</p>
+					<p>🎯 ¡Convierte tu pasión por los videojuegos en una habilidad real y rentable!</p>
+					<p>🕹️ Descárgalo hoy y empieza a construir tu primer videojuego</p>
+					<p>👉 algunos temas...</p>
+					<p>✔️ diseño, creacion, direccion, gameplay</p>
+					<p>✔️ gamificacion</p>
+					<p>✔️ unreal</p>
+					<p>✔️ engin</p>
+					<p>✔️ unity</p>
+					<p>✔️ phaserJS</p>
+					<p>✔️ godot</p>
+					<p>✔️ gamemaker</p>
+					<p>✔️ escenas</p>
+					<p>✔️ personajes</p>
+					<p>✔️ colisiones</p>
+					<p>✔️ saltos</p>
+					<p>✔️ movimientos</p>
+					<p>✔️ enemigos</p>
+					<p>✔️ elementos, interacciones</p>
+					<p>🎯 y muchisimos mas !!!</p>
+					
 					<br>
 					<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
 					<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</P>
@@ -1993,33 +2067,33 @@
 		</div>
 
 <!-- 🔹 SECCION TECNOLOGIA -->
-		<section id="Tecnologia">
-			<div class="titulos-galerias">
-				<h2>Tecnologia</h2>
+<section id="Tecnologia">
+	<div class="titulos-galerias">
+		<h2>Tecnologia</h2>
+	</div>
+</section>
+
+<div class="container">
+
+	<!-- Tarjeta 1 -->
+	<div class="card" data-category="ciberseguridad">
+		<div class="img">
+			<img src="images/fotohacking.png" loading="lazy" alt="">
+		</div>
+		<div class="content">
+			<div class="text">
+				<h3>PAQUETE HACKING ETICO</h3>
+				<span>Preparate, Defiendete y Ataca</span>
 			</div>
-		</section>
+			<button class="openModalBtn">Mas Información</button>
+		</div>
+	</div>
 
-		<div class="container">
-
-			<!-- Tarjeta 1 -->
-			<div class="card" data-category="ciberseguridad">
-				<div class="img">
-					<img src="images/fotohacking.png" loading="lazy" alt="">
-				</div>
-				<div class="content">
-					<div class="text">
-						<h3>PAQUETE HACKING ETICO</h3>
-						<span>Preparate, Defiendete y Ataca</span>
-					</div>
-					<button class="openModalBtn">Mas Información</button>
-				</div>
-			</div>
-
-			<!-- Modal 1 -->
-			<div class="modal">
-				<div class="modal-content">
-					<span class="close">&times;</span>
-					<h2>PAQUETE HACKING ETICO</h2>
+	<!-- Modal 1 -->
+	<div class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>PAQUETE HACKING ETICO</h2>
 <br>
 <p>🛡️ Conviértete en experto en hacking ético: domina las técnicas reales que usan los profesionales de la ciberseguridad</p>
 <p>🛡️ Un entrenamiento 100% práctico para aprender desde cero cómo piensan y actúan los atacantes… y cómo defenderte como un verdadero hacker ético.</p>
@@ -2073,207 +2147,209 @@
 						<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
 					</a> -->
 					<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
-				</div>
-			</div>
-
-			<!-- Tarjeta 2 -->
-			<div class="card" data-category="ciberseguridad">
-				<div class="img">
-					<img src="images/fotocelular.png" loading="lazy" alt="">
-				</div>
-				<div class="content">
-					<div class="text">
-						<h3>TALLER CELULAR</h3>
-						<span>Reparacion y Mtto. de celular</span>
-					</div>
-					<button class="openModalBtn">Mas Información</button>
-				</div>
-			</div>
-
-			<!-- Modal 2 -->
-			<div class="modal">
-				<div class="modal-content">
-					<span class="close">&times;</span>
-					<h2>TALLER CELULAR</h2>
-
-					<p>✔️ EN ESTE CURSO DE REPARACIONES DE CELULARES A NIVEL SOFTWARE, ENCONTRARAS LOS VIDEOS CON CLASES Y TUTORIALES PARA INICIARSE EN LA MATERIA.</p>
-					<p>✔️ TAMBIEN ENCONTRARAS LOS PROGRAMAS Y PAGINAS PARA COMENZAR A INCURSIONAR EN ESTA PROFESION ACTUALMENTE TAN DEMANDADA.</p>
-					<p>✔️ Incluye temas como:</p>
-					<p>📲 reinstalaciones de SO</p>
-					<p>📲 Root y frp</p>
-					<p>📲 drivers</p>
-					<p>📲 modos de dispositivo</p>
-					<p>📲 puertos de comunicación</p>
-					<p>📲 herramientas mkt</p>
-					<p>📲 flasheos</p>
-
-					<br>
-					<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
-					<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</P>
-					<p>NO ESPERES MAS Y APROVECHAS ESTA GRAN OPORTUNIDAD, CONTACTANOS y podrás aprender desde la comodidad de tu hogar o en tus momentos libres, con acceso ilimitado de por vida y por un solo pago. No dejes pasar la oportunidad de adquirir nuevos conocimientos.</p>
-					<p>El acceso es inmediato: el curso está alojado en Google Drive, y podrás guardarlo, descargarlo y revisarlo tantas veces como desees.</p><br>
-					<p>✅ TU PAGO LO PUEDES HACER POR:</p>
-					<p>💳 DEPOSITO BANCARIO.</p>
-					<p>💵 SPIN BY OXXO.</p>
-					<p>🅿️ PAYPAL.</p><br>	
-
-					<p>¡¡¡Invierte en tu conocimiento, prepárate y sal a triunfar !!!</p>
-					<p>✨ Mas contenido para tu salud, bienestar y superación.✨</p>
-
-					<!-- fuente de iconos: https://www.freepik.es/iconos/web -->
-					<a href="https://wa.link/d32x1m" target="_blank" class="BotonMod-wsp">
-						<img src="images/ico_whatsapp_32px.png" alt="WhatsApp" class="BotonMod-wsp-icon">WhatsApp
-					</a>
-					<a href="https://www.facebook.com/profile.php?id=61567273274842" target="_blank" class="BotonMod-fbk">
-						<img src="images/ico_facebook_32px.png" alt="facebook" class="BotonMod-fbk-icon"> Facebook
-					</a>
-					<!-- <a href="https://innovacionysaber.netlify.app/" target="_blank" class="BotonMod-sw">
-						<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
-					</a> -->
-					<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
-				</div>
-			</div>
-
-			<!-- Tarjeta 3 -->
-			<div class="card" data-category="ciberseguridad">
-				<div class="img">
-					<img src="images/fotociber.png" loading="lazy" alt="">
-				</div>
-				<div class="content">
-					<div class="text">
-						<h3>Ciberseguridad</h3>
-						<span>Redes y Web</span>
-					</div>
-					<button class="openModalBtn">Mas Información</button>
-				</div>
-			</div>
-
-			<!-- Modal 3 -->
-			<div class="modal">
-				<div class="modal-content">
-					<span class="close">&times;</span>
-					<h2>CIBERSEGURIDAD PRACTICA REDES Y WEB</h2>
-					<p>💻 Aprende a no dejar sin Protección Datos. Ofrece una Defensa Integral en el Mundo Digital. Prepárate para Desafíos Cibernéticos con Estrategias de Seguridad ¡Comienza Hoy!</p>
-					<P>💻 Formación a tu Ritmo.</p>
-						<p>💻 “Accede cuando quieras, sin horarios y con contenido descargable para practicar donde sea.”</p>
-
-
-					<p>✔️ Incluye temas como:</p>
-					<p>✔️ APRENDE A PROTEGERTE Y A CONTRAATACAR</p>
-					<p>🔐 INTRODUCCION</p>
-					<p>🔐 FUNDAMENTOS DE REDES</p>
-					<p>🔐 ANALISIS Y TRAFICO DE REDES</p>
-					<p>🔐 ATAQUES EN RED</p>
-					<p>🔐 ATAQUES A SERVIDORES WEB</p>
-					<p>💥 “Aprende a defender sistemas. Aprende a pensar como un hacker.”</p>
-
-					<br>
-					<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
-					<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</P>
-					<p>NO ESPERES MAS Y APROVECHAS ESTA GRAN OPORTUNIDAD, CONTACTANOS y podrás aprender desde la comodidad de tu hogar o en tus momentos libres, con acceso ilimitado de por vida y por un solo pago. No dejes pasar la oportunidad de adquirir nuevos conocimientos.</p>
-					<p>El acceso es inmediato: el curso está alojado en Google Drive, y podrás guardarlo, descargarlo y revisarlo tantas veces como desees.</p><br>
-					<p>✅ TU PAGO LO PUEDES HACER POR:</p>
-					<p>💳 DEPOSITO BANCARIO.</p>
-					<p>💵 SPIN BY OXXO.</p>
-					<p>🅿️ PAYPAL.</p><br>	
-
-					<p>¡¡¡Invierte en tu conocimiento, prepárate y sal a triunfar !!!</p>
-					<p>✨ Mas contenido para tu salud, bienestar y superación.✨</p>
-
-					<!-- fuente de iconos: https://www.freepik.es/iconos/web -->
-					<a href="https://wa.link/d32x1m" target="_blank" class="BotonMod-wsp">
-						<img src="images/ico_whatsapp_32px.png" alt="WhatsApp" class="BotonMod-wsp-icon">WhatsApp
-					</a>
-					<a href="https://www.facebook.com/profile.php?id=61567273274842" target="_blank" class="BotonMod-fbk">
-						<img src="images/ico_facebook_32px.png" alt="facebook" class="BotonMod-fbk-icon"> Facebook
-					</a>
-					<!-- <a href="https://innovacionysaber.netlify.app/" target="_blank" class="BotonMod-sw">
-						<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
-					</a> -->
-					<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
-				</div>
-			</div>
-
-			<!-- Tarjeta 4 -->
-			<div class="card" data-category="superacion">
-				<div class="img">
-					<img src="images/fotoprograma.png" loading="lazy" alt="">
-				</div>
-				<div class="content">
-					<div class="text">
-						<h3>PROGRAMACION</h3>
-						<span>Pack de libros completo</span>
-					</div>
-					<button class="openModalBtn">Mas Información</button>
-				</div>
-			</div>
-
-			<!-- Modal 4 -->
-			<div class="modal">
-				<div class="modal-content">
-					<span class="close">&times;</span>
-					<h2>SUPER PACK LIBROS PROGRAMACION</h2>
-					<p>✔️ Imprescindible para cualquier desarrollador, ingeniero de software, director de proyectos, jefe de equipo o analista de sistemas interesado en crear codigo</p>
-					<p>✔️ ALGUNOS DE LOS LENGUAJES</p>
-					<p>🖥️ .NET</p>
-					<p>🖥️ ajax</p>
-					<p>🖥️ android</p>
-					<p>🖥️ angular</p>
-					<p>🖥️ asp</p>
-					<p>🖥️ bases de datos</p>
-					<p>🖥️ blockchain</p>
-					<p>🖥️ boostrap</p>
-					<p>🖥️ django</p>
-					<p>🖥️ flask</p>
-					<p>🖥️ c# c++</p>
-					<p>🖥️ cobol</p>
-					<p>🖥️ java - javascript</p>
-					<p>🖥️ haskell</p>
-					<p>🖥️ industria </p>
-					<p>🖥️ IA</p>
-					<p>🖥️ jquery</p>
-					<p>🖥️ kotlin</p>
-					<p>🖥️ laravel</p>
-					<p>🖥️ matlab</p>
-					<p>🖥️ node</p>
-					<p>🖥️ pascal</p>
-					<p>🖥️ php</p>
-					<p>🖥️ python</p>
-					<p>🖥️ react</p>
-					<p>🖥️ react</p>
-					<p>🖥️ redes</p>
-					<p>🖥️ rubi</p>
-					<p>🖥️ scala</p>
-					<p>✔️ Etc. Etc.</p>
-
-					<br>
-					<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
-					<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</p>
-					<p>NO ESPERES MAS Y APROVECHAS ESTA GRAN OPORTUNIDAD, CONTACTANOS y podrás aprender desde la comodidad de tu hogar o en tus momentos libres, con acceso ilimitado de por vida y por un solo pago. No dejes pasar la oportunidad de adquirir nuevos conocimientos.</p>
-					<p>El acceso es inmediato: el curso está alojado en Google Drive, y podrás guardarlo, descargarlo y revisarlo tantas veces como desees.</p><br>
-					<p>✅ TU PAGO LO PUEDES HACER POR:</p>
-					<p>💳 DEPOSITO BANCARIO.</p>
-					<p>💵 SPIN BY OXXO.</p>
-					<p>🅿️ PAYPAL.</p><br>	
-
-					<p>¡¡¡Invierte en tu conocimiento, prepárate y sal a triunfar !!!</p>
-					<p>✨ Mas contenido para tu salud, bienestar y superación.✨</p>
-
-					<!-- fuente de iconos: https://www.freepik.es/iconos/web -->
-					<a href="https://wa.link/d32x1m" target="_blank" class="BotonMod-wsp">
-						<img src="images/ico_whatsapp_32px.png" alt="WhatsApp" class="BotonMod-wsp-icon">WhatsApp
-					</a>
-					<a href="https://www.facebook.com/profile.php?id=61567273274842" target="_blank" class="BotonMod-fbk">
-						<img src="images/ico_facebook_32px.png" alt="facebook" class="BotonMod-fbk-icon"> Facebook
-					</a>
-					<!-- <a href="https://innovacionysaber.netlify.app/" target="_blank" class="BotonMod-sw">
-						<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
-					</a> -->
-					<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
-				</div>
-			</div>
 
 		</div>
+	</div>
+
+	<!-- Tarjeta 2 -->
+	<div class="card" data-category="ciberseguridad">
+		<div class="img">
+			<img src="images/fotocelular.png" loading="lazy" alt="">
+		</div>
+		<div class="content">
+			<div class="text">
+				<h3>TALLER CELULAR</h3>
+				<span>Reparacion y Mtto. de celular</span>
+			</div>
+			<button class="openModalBtn">Mas Información</button>
+		</div>
+	</div>
+
+	<!-- Modal 2 -->
+	<div class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>TALLER CELULAR</h2>
+
+			<p>✔️ EN ESTE CURSO DE REPARACIONES DE CELULARES A NIVEL SOFTWARE, ENCONTRARAS LOS VIDEOS CON CLASES Y TUTORIALES PARA INICIARSE EN LA MATERIA.</p>
+			<p>✔️ TAMBIEN ENCONTRARAS LOS PROGRAMAS Y PAGINAS PARA COMENZAR A INCURSIONAR EN ESTA PROFESION ACTUALMENTE TAN DEMANDADA.</p>
+			<p>✔️ Incluye temas como:</p>
+			<p>📲 reinstalaciones de SO</p>
+			<p>📲 Root y frp</p>
+			<p>📲 drivers</p>
+			<p>📲 modos de dispositivo</p>
+			<p>📲 puertos de comunicación</p>
+			<p>📲 herramientas mkt</p>
+			<p>📲 flasheos</p>
+
+			<br>
+			<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
+			<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</P>
+			<p>NO ESPERES MAS Y APROVECHAS ESTA GRAN OPORTUNIDAD, CONTACTANOS y podrás aprender desde la comodidad de tu hogar o en tus momentos libres, con acceso ilimitado de por vida y por un solo pago. No dejes pasar la oportunidad de adquirir nuevos conocimientos.</p>
+			<p>El acceso es inmediato: el curso está alojado en Google Drive, y podrás guardarlo, descargarlo y revisarlo tantas veces como desees.</p><br>
+			<p>✅ TU PAGO LO PUEDES HACER POR:</p>
+			<p>💳 DEPOSITO BANCARIO.</p>
+			<p>💵 SPIN BY OXXO.</p>
+			<p>🅿️ PAYPAL.</p><br>	
+
+			<p>¡¡¡Invierte en tu conocimiento, prepárate y sal a triunfar !!!</p>
+			<p>✨ Mas contenido para tu salud, bienestar y superación.✨</p>
+
+			<!-- fuente de iconos: https://www.freepik.es/iconos/web -->
+			<a href="https://wa.link/d32x1m" target="_blank" class="BotonMod-wsp">
+				<img src="images/ico_whatsapp_32px.png" alt="WhatsApp" class="BotonMod-wsp-icon">WhatsApp
+			</a>
+			<a href="https://www.facebook.com/profile.php?id=61567273274842" target="_blank" class="BotonMod-fbk">
+				<img src="images/ico_facebook_32px.png" alt="facebook" class="BotonMod-fbk-icon"> Facebook
+			</a>
+			<!-- <a href="https://innovacionysaber.netlify.app/" target="_blank" class="BotonMod-sw">
+				<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
+			</a> -->
+			<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
+		</div>
+	</div>
+
+	<!-- Tarjeta 3 -->
+	<div class="card" data-category="ciberseguridad">
+		<div class="img">
+			<img src="images/fotociber.png" loading="lazy" alt="">
+		</div>
+		<div class="content">
+			<div class="text">
+				<h3>Ciberseguridad</h3>
+				<span>Redes y Web</span>
+			</div>
+			<button class="openModalBtn">Mas Información</button>
+		</div>
+	</div>
+
+	<!-- Modal 3 -->
+	<div class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>CIBERSEGURIDAD PRACTICA REDES Y WEB</h2>
+			<p>💻 Aprende a no dejar sin Protección Datos. Ofrece una Defensa Integral en el Mundo Digital. Prepárate para Desafíos Cibernéticos con Estrategias de Seguridad ¡Comienza Hoy!</p>
+			<P>💻 Formación a tu Ritmo.</p>
+				<p>💻 “Accede cuando quieras, sin horarios y con contenido descargable para practicar donde sea.”</p>
+
+
+			<p>✔️ Incluye temas como:</p>
+			<p>✔️ APRENDE A PROTEGERTE Y A CONTRAATACAR</p>
+			<p>🔐 INTRODUCCION</p>
+			<p>🔐 FUNDAMENTOS DE REDES</p>
+			<p>🔐 ANALISIS Y TRAFICO DE REDES</p>
+			<p>🔐 ATAQUES EN RED</p>
+			<p>🔐 ATAQUES A SERVIDORES WEB</p>
+			<p>💥 “Aprende a defender sistemas. Aprende a pensar como un hacker.”</p>
+
+			<br>
+			<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
+			<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</P>
+			<p>NO ESPERES MAS Y APROVECHAS ESTA GRAN OPORTUNIDAD, CONTACTANOS y podrás aprender desde la comodidad de tu hogar o en tus momentos libres, con acceso ilimitado de por vida y por un solo pago. No dejes pasar la oportunidad de adquirir nuevos conocimientos.</p>
+			<p>El acceso es inmediato: el curso está alojado en Google Drive, y podrás guardarlo, descargarlo y revisarlo tantas veces como desees.</p><br>
+			<p>✅ TU PAGO LO PUEDES HACER POR:</p>
+			<p>💳 DEPOSITO BANCARIO.</p>
+			<p>💵 SPIN BY OXXO.</p>
+			<p>🅿️ PAYPAL.</p><br>	
+
+			<p>¡¡¡Invierte en tu conocimiento, prepárate y sal a triunfar !!!</p>
+			<p>✨ Mas contenido para tu salud, bienestar y superación.✨</p>
+
+			<!-- fuente de iconos: https://www.freepik.es/iconos/web -->
+			<a href="https://wa.link/d32x1m" target="_blank" class="BotonMod-wsp">
+				<img src="images/ico_whatsapp_32px.png" alt="WhatsApp" class="BotonMod-wsp-icon">WhatsApp
+			</a>
+			<a href="https://www.facebook.com/profile.php?id=61567273274842" target="_blank" class="BotonMod-fbk">
+				<img src="images/ico_facebook_32px.png" alt="facebook" class="BotonMod-fbk-icon"> Facebook
+			</a>
+			<!-- <a href="https://innovacionysaber.netlify.app/" target="_blank" class="BotonMod-sw">
+				<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
+			</a> -->
+			<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
+		</div>
+	</div>
+
+	<!-- Tarjeta 4 -->
+	<div class="card" data-category="superacion">
+		<div class="img">
+			<img src="images/fotoprograma.png" loading="lazy" alt="">
+		</div>
+		<div class="content">
+			<div class="text">
+				<h3>PROGRAMACION</h3>
+				<span>Pack de libros completo</span>
+			</div>
+			<button class="openModalBtn">Mas Información</button>
+		</div>
+	</div>
+
+	<!-- Modal 4 -->
+	<div class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>SUPER PACK LIBROS PROGRAMACION</h2>
+			<p>✔️ Imprescindible para cualquier desarrollador, ingeniero de software, director de proyectos, jefe de equipo o analista de sistemas interesado en crear codigo</p>
+			<p>✔️ ALGUNOS DE LOS LENGUAJES</p>
+			<p>🖥️ .NET</p>
+			<p>🖥️ ajax</p>
+			<p>🖥️ android</p>
+			<p>🖥️ angular</p>
+			<p>🖥️ asp</p>
+			<p>🖥️ bases de datos</p>
+			<p>🖥️ blockchain</p>
+			<p>🖥️ boostrap</p>
+			<p>🖥️ django</p>
+			<p>🖥️ flask</p>
+			<p>🖥️ c# c++</p>
+			<p>🖥️ cobol</p>
+			<p>🖥️ java - javascript</p>
+			<p>🖥️ haskell</p>
+			<p>🖥️ industria </p>
+			<p>🖥️ IA</p>
+			<p>🖥️ jquery</p>
+			<p>🖥️ kotlin</p>
+			<p>🖥️ laravel</p>
+			<p>🖥️ matlab</p>
+			<p>🖥️ node</p>
+			<p>🖥️ pascal</p>
+			<p>🖥️ php</p>
+			<p>🖥️ python</p>
+			<p>🖥️ react</p>
+			<p>🖥️ react</p>
+			<p>🖥️ redes</p>
+			<p>🖥️ rubi</p>
+			<p>🖥️ scala</p>
+			<p>✔️ Etc. Etc.</p>
+
+			<br>
+			<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
+			<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</p>
+			<p>NO ESPERES MAS Y APROVECHAS ESTA GRAN OPORTUNIDAD, CONTACTANOS y podrás aprender desde la comodidad de tu hogar o en tus momentos libres, con acceso ilimitado de por vida y por un solo pago. No dejes pasar la oportunidad de adquirir nuevos conocimientos.</p>
+			<p>El acceso es inmediato: el curso está alojado en Google Drive, y podrás guardarlo, descargarlo y revisarlo tantas veces como desees.</p><br>
+			<p>✅ TU PAGO LO PUEDES HACER POR:</p>
+			<p>💳 DEPOSITO BANCARIO.</p>
+			<p>💵 SPIN BY OXXO.</p>
+			<p>🅿️ PAYPAL.</p><br>	
+
+			<p>¡¡¡Invierte en tu conocimiento, prepárate y sal a triunfar !!!</p>
+			<p>✨ Mas contenido para tu salud, bienestar y superación.✨</p>
+
+			<!-- fuente de iconos: https://www.freepik.es/iconos/web -->
+			<a href="https://wa.link/d32x1m" target="_blank" class="BotonMod-wsp">
+				<img src="images/ico_whatsapp_32px.png" alt="WhatsApp" class="BotonMod-wsp-icon">WhatsApp
+			</a>
+			<a href="https://www.facebook.com/profile.php?id=61567273274842" target="_blank" class="BotonMod-fbk">
+				<img src="images/ico_facebook_32px.png" alt="facebook" class="BotonMod-fbk-icon"> Facebook
+			</a>
+			<!-- <a href="https://innovacionysaber.netlify.app/" target="_blank" class="BotonMod-sw">
+				<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
+			</a> -->
+			<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
+		</div>
+	</div>
+
+</div>
+
 
 <!-- 🔹 SECCION CONTACTO -->
 		<section id="Contacto">
@@ -2405,7 +2481,7 @@
 				  </svg>
 			</a>
 
-			<a href="https://www.tiktok.com/@innovacion_y_saber" target="_blank" class="social-icon tiktok">
+			<a href="https://www.tiktok.com/@innovacionysaber" target="_blank" class="social-icon tiktok">
 				<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 50 50" fill="currentColor">
 					<path d="M41.5,15.5c-3.5,0-6.7-1.4-9.1-3.7c-1.2-1.2-2.2-2.6-2.9-4.2c-0.7-1.6-1-3.3-1-5.1h-7v29.3c0,3.3-2.7,6-6,6
 					c-1.7,0-3.2-0.7-4.3-1.8c-1.1-1.1-1.8-2.6-1.8-4.3c0-3.3,2.7-6,6-6c0.5,0,1,0.1,1.5,0.2v-7.2c-0.5-0.1-1-0.1-1.5-0.1
@@ -2435,6 +2511,7 @@
 
 	<!-- <script src="js/script.js"></script> -->
 	<script src="js/script.js"></script>
+
 
 </body>
 </html>

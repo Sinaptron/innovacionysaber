@@ -203,13 +203,85 @@ Es  decir, hemos conseguido que el elemento con la clase container sea responsiv
     }
 }
 
+###########################################
+
+CODIGOS PARA SECCION INVITACION PAGINA AMIGA
+
+Después del banner principal (recomendado):
+
+<!-- 🔹 SECCION BANNER -->
+<div class="banner">
+    <h1 class="banner-titulo">Innovacion y Saber</h1>
+    <p class="banner-subtitulo">
+        Cursos, Libros, Videos, Audios.  <br>
+        Para tu desarrollo personal, profesional y espiritual.
+    </p>
+</div>
+
+<!-- Nueva sección de invitación -->
+<div class="invitacion-otra-pagina">
+    <p>¿Buscas más contenido exclusivo? Visita nuestra otra plataforma</p>
+    <a href="https://tuotrapagina.com" target="_blank" class="btn-invitacion">Visitar ahora</a>
+</div>
+
+Antes del footer:
+<!-- Antes del footer -->
+<section class="invitacion-final">
+    <h3>¿Te gustó nuestro contenido?</h3>
+    <p>Descubre mucho más en nuestra otra plataforma educativa</p>
+    <a href="https://tuotrapagina.com" target="_blank" class="btn-invitacion">Explorar ahora</a>
+</section>
+
+<!-- 🔹 SECCION FOOTER -->
+<footer class="footer">
+
+En la sección de contacto (como alternativa adicional):
+
+<!-- 🔹 SECCION CONTACTO -->
+<section id="Contacto">
+    <div class="titulos-galerias">
+        <h2>Contacto</h2>
+    </div>
+    <div class="invitacion-contacto">
+        <p>También puedes encontrar más recursos en:</p>
+        <a href="https://tuotrapagina.com" target="_blank" class="btn-invitacion">Visitar plataforma</a>
+    </div>
+</section>
+
+/* Estilos para la sección de invitación */
+.invitacion-otra-pagina, 
+.invitacion-final, 
+.invitacion-contacto {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.btn-invitacion {
+    display: inline-block;
+    padding: 12px 30px;
+    margin-top: 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-invitacion:hover {
+    background-color: #3e8e41;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+###########################################
 
 
 
-
-
-
-
-
-
-
+##########################################

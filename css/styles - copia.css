@@ -82,7 +82,7 @@
   
   header {
 	/* background:  #333; */
-	color: #fff;
+	color: var(--blanco-marfil);
 	padding: 10px 0;
 	position: fixed;
 	width: 100%;
@@ -143,7 +143,7 @@
   
   .nav-links li {
 	margin: 0 7px;
-	/* Reducido el margen entre elementos */
+	/* Reduce margen entre elementos */
   }
   
   .nav-links li a {
@@ -200,11 +200,6 @@
 	}
   }
 
-
-  
-
-
-
   /* ======================================================
 	 🔹 BANNER PRINCIPAL
 	 ====================================================== */
@@ -236,14 +231,15 @@
 
 .banner-titulo { 
     /* color: var(--blanco-marfil); */
-    margin-top: 40px; /* Reduce el margen superior */
+    margin-top: 30px; /* Reduce el margen superior */
     margin-bottom: 10px; /* Reduce el margen inferior para acercarlo al subtítulo */
-    font-size: clamp(2.5rem, 5vw, 5rem);
-
-	animation: efecto 2s linear infinite;
+    /* font-size: clamp(3.10rem, 6.25vw, 6.25rem); */
+	font-size: clamp(3rem, 8vw, 6rem);
+	animation: efecto 2s linear infinite; /* para el efecto resplandor */
 }
 
-@keyframes efecto {
+
+ @keyframes efecto {
 	0%,
 	100% {
 	  color: var(--color-footer);
@@ -255,7 +251,7 @@
 	  color: var(--blanco-marfil);
 	  text-shadow: none;
 	}
-  }
+  } 
 
 .banner-subtitulo {
     color: var(--blanco-marfil);
@@ -266,8 +262,8 @@
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
     .banner-titulo {
-        font-size: 2rem; /* Reduce el tamaño del título */
-        margin-top: 40px;
+        font-size: 3rem; /* Reduce el tamaño del título */
+        margin-top: 20px;
         margin-bottom: 15px;
         text-align: center;	
     }
@@ -280,7 +276,7 @@
 
 @media (max-width: 480px) {
     .banner-titulo {
-        font-size: 1.6rem; /* Aún más pequeño en pantallas muy pequeñas */
+        font-size: 1.7rem; /* Aún más pequeño en pantallas muy pequeñas */
         margin-top: 30px;
         margin-bottom: 10px;
     }
@@ -291,8 +287,8 @@
 
 @media (max-width: 370px) {
     .banner-titulo {
-        font-size: 1.2rem; /* Aún más pequeño en pantallas muy pequeñas */
-        margin-top: 30px;
+        font-size: 1.5rem; /* Aún más pequeño en pantallas muy pequeñas */
+        margin-top: 20px;
         margin-bottom: 10px;
     }
     .banner-subtitulo {
@@ -1348,3 +1344,103 @@ section.filtrobusq {
 	filter: brightness(1.2) contrast(1.1) saturate(1.3);
   }
   
+
+  /* ================================================
+	 🔹  Sección de invitación
+	 ================================================ */
+
+.contacto-flex {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+	
+}
+
+.formulario-container {
+    flex: 1;
+    min-width: 0;
+	
+}
+
+.invitacion-container {
+    flex: 0 0 300px;
+}
+
+/* Estilos para la tarjeta de invitación */
+.invitacion-card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	
+}
+
+.invitacion-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.invitacion-card p {
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.invitacion-card  img {
+    border-radius: 10px;
+    /* padding: 1.5rem; */
+	width: 3.5%;
+    height: 3.5%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.btn-invitacion {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4a6fa5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-invitacion:hover {
+    background-color: #3a5a8f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-invitacion svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-invitacion:hover svg {
+    transform: translateX(3px);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .contacto-flex {
+        flex-direction: column;
+    }
+    
+    .invitacion-container {
+        flex: 1;
+    }
+    
+    .invitacion-card {
+        padding: 1.25rem;
+    }
+}

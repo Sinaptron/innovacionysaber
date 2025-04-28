@@ -57,6 +57,9 @@ document.addEventListener("keydown", function (event) {
 
 
 
+
+
+
 // Titulo en la barra de direcciones con movimiento
 var txt = "Cursos Libros Videos Tutoriales > Aprende sin complicaciones A tu ritmo > rápido y accesible > Tu crecimiento empieza aquí > Fácil de entender > Listo para descargar ";
 var espera = 140;
@@ -263,7 +266,78 @@ function createWave(event) {
 
 // ✅ FILTRO BUSQUEDAS POR CATEGORIA
 
-document.getElementById('category').addEventListener('change', function () {
+// este codigo es sin iconos de categoria seleccionadas
+
+// document.getElementById('category').addEventListener('change', function () {
+//   const selected = this.value;
+//   const cards = document.querySelectorAll('.card');
+
+//   cards.forEach(card => {
+//     const category = card.getAttribute('data-category');
+//     if (selected === 'all' || category === selected) {
+//       card.classList.remove('ocultanofiltro');
+//     } else {
+//       card.classList.add('ocultanofiltro');
+//     }
+//   });
+// });
+
+// este codigo es para poner icono a lado derecho de las categorias seleccionadas
+// este codigo contiene la opcion para desplegar icono basico de categoria seleccionada
+// const categoryIcons = {
+//   all: '🔎',
+//   bebidas: '🍹',
+//   cocina: '🍳',
+//   ciberseguridad: '🛡️',
+//   esoterico: '🔮',
+//   espiritual: '🧘‍♂️',
+//   legal: '⚖️',
+//   mascotas: '🐾',
+//   oficios: '🛠️',
+//   salud: '🩺',
+//   superacion: '🚀'
+// };
+
+// const categorySelect = document.getElementById('category');
+// const iconoFiltro = document.getElementById('icono-filtro');
+
+// categorySelect.addEventListener('change', function () {
+//   const selected = this.value;
+//   const cards = document.querySelectorAll('.card');
+
+//   cards.forEach(card => {
+//     const category = card.getAttribute('data-category');
+//     if (selected === 'all' || category === selected) {
+//       card.classList.remove('ocultanofiltro');
+//     } else {
+//       card.classList.add('ocultanofiltro');
+//     }
+//   });
+
+  // Actualizar icono
+//   iconoFiltro.textContent = categoryIcons[selected] || '🔎';
+// });
+
+// este codigo contiene la opcion para desplegar icono fontawesome de categoria seleccionada
+
+const categoryIcons = {
+  all: 'fa-solid fa-filter',
+  bebidas: 'fa-solid fa-martini-glass',
+  cocina: 'fa-solid fa-utensils',
+  ciberseguridad: 'fa-solid fa-shield-halved',
+  esoterico: 'fa-solid fa-hat-wizard',
+  espiritual: 'fa-solid fa-person-praying',
+  legal: 'fa-solid fa-scale-balanced',
+  mascotas: 'fa-solid fa-paw',
+  oficios: 'fa-solid fa-hammer',
+  salud: 'fa-solid fa-heart-pulse',
+  superacion: 'fa-solid fa-rocket'
+};
+
+const categorySelect = document.getElementById('category');
+const iconoFiltro = document.getElementById('icono-filtro');
+
+categorySelect.addEventListener('change', function () {
   const selected = this.value;
   const cards = document.querySelectorAll('.card');
 
@@ -275,4 +349,8 @@ document.getElementById('category').addEventListener('change', function () {
       card.classList.add('ocultanofiltro');
     }
   });
+
+  // Cambiar icono
+  const newIcon = categoryIcons[selected] || 'fa-solid fa-filter';
+  iconoFiltro.className = newIcon;
 });

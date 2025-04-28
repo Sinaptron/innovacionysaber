@@ -4,6 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- Fuente moderna: Poppins -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"> -->
+ <!-- Fuente Inter -->
+ <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"> -->
+
+	  <!-- Fuente Roboto -->
+	  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 	<!-- EVITAR que desactiven JavaScript para ver el código -->
 <noscript>
   <meta http-equiv="refresh" content="0;url=https://www.google.com">
@@ -13,8 +21,10 @@
 	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 	<!-- <title>Nexos Digitales</title> -->
 	<link rel="stylesheet" href="css/styles.css">
-	<!-- para importar los iconos de redes sociales -->
-	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
 </head>
 
 
@@ -72,7 +82,8 @@
 
 
 		<!-- 🔹 SECCION PARA FILTRAR BUSQUEDA -->
-		<section class="filtrobusq">
+		 <!-- este codigo no contiene icono de categoria seleccionada -->
+		<!-- <section class="filtrobusq">
 			<div class="filtro-bar">
 			  <label for="category">Filtrar por Tema:</label>
 			  <select id="category">
@@ -89,7 +100,59 @@
 				<option value="superacion">Superacion</option>
 			  </select>
 			</div>
-        </section>
+        </section> -->
+  
+<!-- este codigo contiene la opcion para desplegar icono basico de categoria seleccionada -->
+  <!-- <section class="filtrobusq">
+	<div class="filtro-bar">
+	  <div class="filtro-row">
+		<label for="category">Filtrar por Tema:</label>
+		<div class="select-icon-container">
+		  <select id="category">
+			<option value="all">Todos</option>
+			<option value="bebidas">Bebidas</option>        
+			<option value="cocina">Cocina</option>
+			<option value="ciberseguridad">Ciber-Hacking</option>
+			<option value="esoterico">Esoterismo</option>
+			<option value="espiritual">Espiritualidad</option>
+			<option value="legal">Legal</option>
+			<option value="mascotas">Mascotas</option>
+			<option value="oficios">Oficios</option>
+			<option value="salud">Salud</option>
+			<option value="superacion">Superación</option>
+		  </select>
+		  <span id="icono-filtro" class="iconito">🔎</span>
+		</div>
+	  </div>
+	</div>
+  </section> -->
+  
+<!-- este codigo contiene la opcion para desplegar icono fontawesome de categoria seleccionada -->
+  <section class="filtrobusq">
+	<div class="filtro-bar">
+	  <div class="filtro-row">
+		<label for="category">Filtrar por Tema:</label>
+		<div class="select-icon-container">
+		  <select id="category">
+			<option value="all">Todos</option>
+			<option value="bebidas">Bebidas</option>        
+			<option value="cocina">Cocina</option>
+			<option value="ciberseguridad">Ciber-Hacking</option>
+			<option value="esoterico">Esoterismo</option>
+			<option value="espiritual">Espiritualidad</option>
+			<option value="legal">Legal</option>
+			<option value="mascotas">Mascotas</option>
+			<option value="oficios">Oficios</option>
+			<option value="salud">Salud</option>
+			<option value="superacion">Superación</option>
+		  </select>
+		  <i id="icono-filtro" class="fa-solid fa-filter"></i>
+		</div>
+	  </div>
+	</div>
+  </section>
+  
+
 
 <!-- 🔹 SECCION CURSOS -->
 
@@ -1403,6 +1466,277 @@
 							</div>
 						</div>
 
+												<!-- Tarjeta 18 -->
+												<div class="card" data-category="salud">
+													<div class="img">
+														<img src="images/fotomusculos.png" loading="lazy" alt="">
+													</div>
+													<div class="content">
+														<div class="text">
+															<h3>Unico Pago $ 99.00 mxn</h3>
+															<span>fuerza, músculo y nutrición</span>
+														</div>
+														<button class="openModalBtn">Mas Información</button>
+													</div>
+												</div>
+									
+												<!-- Modal 18 -->
+												<div class="modal">
+													<div class="modal-content">
+														<span class="close">&times;</span>
+														<h2>Construye tu mejor versión: fuerza, músculo y nutrición inteligente</h2>
+						<br>
+						<p>💪 ¿Sueñas con transformar tu cuerpo, pero no sabes por dónde empezar?
+							Conoce el método completo de calistenia, musculación y nutrición que realmente funciona. </p>
+							<p>💪 No necesitas un gimnasio caro, suplementos milagrosos ni rutinas complicadas.</p>
+							<p>💪 Solo necesitas un plan claro, ejercicios efectivos y una nutrición adecuada.</p>
+							<p>💪 En este producto digital aprenderás:</p>
+							<p>👉 Calistenia: usa tu propio peso para desarrollar fuerza y músculo</p>
+							<p>👉 Musculación: rutinas progresivas para esculpir tu cuerpo</p>
+							<p>👉 Nutrición: guía fácil para aumentar músculo sin subir grasa</p>
+							<p>👉 Consejos de recuperación y mentalidad de alto rendimiento 🏆</p>
+							<p>✅  Para principiantes y avanzados</p>							
+							<p>✅  Planes adaptables a tu tiempo y nivel físico</p>
+							<p>✅  100% digital</p>
+							<p>👉 y muchisimos mas !!!</p>
+							<p> Beneficios:</p>
+<p>💥 Aumenta tu masa muscular de forma natural</p>
+<p>💥 Mejora tu fuerza, resistencia y físico general</p>
+<p>💥 Aprende a alimentarte para ganar músculo de forma efectiva</p>
+<p>💥 Transforma tu cuerpo y tu confianza</p>
+
+<p>🏋️‍♂️ Empieza hoy tu transformación física</p>
+<p>📲 Descarga tu paquete completo y entrena donde quieras</p>
+<p>💬  Escríbeme para más información personalizada</p>
+
+							<br>		
+														<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
+														<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</P>
+														<p>NO ESPERES MAS Y APROVECHAS ESTA GRAN OPORTUNIDAD, CONTACTANOS y podrás aprender desde la comodidad de tu hogar o en tus momentos libres, con acceso ilimitado de por vida y por un solo pago. No dejes pasar la oportunidad de adquirir nuevos conocimientos.</p>
+														<p>El acceso es inmediato: el curso está alojado en Google Drive, y podrás guardarlo, descargarlo y revisarlo tantas veces como desees.</p><br>
+														<p>✅ TU PAGO LO PUEDES HACER POR:</p>
+														<p>💳 DEPOSITO BANCARIO.</p>
+														<p>💵 SPIN BY OXXO.</p>
+														<p>🅿️ PAYPAL.</p><br>				
+														<p>¡¡¡Invierte en tu conocimiento, prepárate y sal a triunfar !!!</p>
+														<p>✨ Mas contenido para tu salud, bienestar y superación.✨</p>
+									
+														<!-- fuente de iconos: https://www.freepik.es/iconos/web -->
+														<a href="https://wa.link/d32x1m" target="_blank" class="BotonMod-wsp">
+															<img src="images/ico_whatsapp_32px.png" alt="WhatsApp" class="BotonMod-wsp-icon">WhatsApp
+														</a>
+														<a href="https://www.facebook.com/profile.php?id=61567273274842" target="_blank" class="BotonMod-fbk">
+															<img src="images/ico_facebook_32px.png" alt="facebook" class="BotonMod-fbk-icon"> Facebook
+														</a>
+														<!-- <a href="https://innovacionysaber.netlify.app/" target="_blank" class="BotonMod-sw">
+															<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
+														</a> -->
+														<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
+													</div>
+												</div>
+
+												<!-- Tarjeta 19 -->
+												<div class="card" data-category="superacion">
+													<div class="img">
+														<img src="images/fotoffice.png" loading="lazy" alt="">
+													</div>
+													<div class="content">
+														<div class="text">
+															<h3>Unico Pago $ 99.00 mxn</h3>
+															<span>Domina Excel, Word y PowerPoint</span>
+														</div>
+														<button class="openModalBtn">Mas Información</button>
+													</div>
+												</div>
+									
+												<!-- Modal 19 -->
+												<div class="modal">
+													<div class="modal-content">
+														<span class="close">&times;</span>
+														<h2>Domina las herramientas que abren puertas: Excel, Word y PowerPoint desde cero</h2>
+						<br>
+						<p>📊 Domina las herramientas que abren puertas: Excel, Word y PowerPoint desde cero</p>
+						<p>📊 ¿Te gustaría mejorar tu currículum y ser más competitivo?
+						Aprende Excel, Word y PowerPoint de manera fácil, rápida y desde cero. 🚀</p>
+						<p>📊 Hoy, saber usar Excel, Word y PowerPoint ya no es opcional: es esencial.</p>
+						<p>📊 Sea para conseguir un mejor empleo, estudiar o emprender, el manejo de estas herramientas te abre más oportunidades.</p>
+						<p>🎯 Con nuestro producto digital aprenderás:</p>
+						<p>👉 Excel: fórmulas, gráficos, bases de datos y tips profesionales</p>
+						<p>👉 Word: documentos impactantes, currículums, cartas y más</p>
+						<p>👉 PowerPoint: presentaciones que cautivan y convencen</p>
+						<br>
+						<p>🎯 Beneficios:</p>
+						<p>✅  Mejora tu perfil profesional en semanas</p>
+						<p>✅  Crea documentos, reportes y presentaciones de alta calidad</p>
+						<p>✅  Abre puertas a mejores trabajos o proyectos personales</p>
+						<p>✅  Aprende habilidades que las empresas buscan todos los días</p>
+						<p>💥 Invierte en tu futuro y aprende herramientas claves</p>
+						<p>📲 Descarga el curso/ebook ahora y empieza hoy mismo</p>
+						<p>💬  Escríbeme para más información personalizada</p>
+						
+
+							<br>		
+														<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
+														<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</P>
+														<p>NO ESPERES MAS Y APROVECHAS ESTA GRAN OPORTUNIDAD, CONTACTANOS y podrás aprender desde la comodidad de tu hogar o en tus momentos libres, con acceso ilimitado de por vida y por un solo pago. No dejes pasar la oportunidad de adquirir nuevos conocimientos.</p>
+														<p>El acceso es inmediato: el curso está alojado en Google Drive, y podrás guardarlo, descargarlo y revisarlo tantas veces como desees.</p><br>
+														<p>✅ TU PAGO LO PUEDES HACER POR:</p>
+														<p>💳 DEPOSITO BANCARIO.</p>
+														<p>💵 SPIN BY OXXO.</p>
+														<p>🅿️ PAYPAL.</p><br>				
+														<p>¡¡¡Invierte en tu conocimiento, prepárate y sal a triunfar !!!</p>
+														<p>✨ Mas contenido para tu salud, bienestar y superación.✨</p>
+									
+														<!-- fuente de iconos: https://www.freepik.es/iconos/web -->
+														<a href="https://wa.link/d32x1m" target="_blank" class="BotonMod-wsp">
+															<img src="images/ico_whatsapp_32px.png" alt="WhatsApp" class="BotonMod-wsp-icon">WhatsApp
+														</a>
+														<a href="https://www.facebook.com/profile.php?id=61567273274842" target="_blank" class="BotonMod-fbk">
+															<img src="images/ico_facebook_32px.png" alt="facebook" class="BotonMod-fbk-icon"> Facebook
+														</a>
+														<!-- <a href="https://innovacionysaber.netlify.app/" target="_blank" class="BotonMod-sw">
+															<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
+														</a> -->
+														<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
+													</div>
+												</div>
+
+
+												<!-- Tarjeta 20 -->
+												<div class="card" data-category="superacion">
+													<div class="img">
+														<img src="images/fotomarketing.png" loading="lazy" alt="">
+													</div>
+													<div class="content">
+														<div class="text">
+															<h3>Unico Pago $ 99.00 mxn</h3>
+															<span>Crece tus ideas, negocio o marca</span>
+														</div>
+														<button class="openModalBtn">Mas Información</button>
+													</div>
+												</div>
+									
+												<!-- Modal 20 -->
+												<div class="modal">
+													<div class="modal-content">
+														<span class="close">&times;</span>
+														<h2>Aprende Marketing Digital y haz crecer tus ideas, tu negocio o tu marca personal</h2>
+						<br>
+						<p>🚀 Aprende Marketing Digital y haz crecer tus ideas, tu negocio o tu marca personal</p>
+						<p>🎯 ¿Quieres vender más, tener más clientes o construir una marca que impacte?</p>
+						<p>💥 Aprende marketing digital de manera sencilla, paso a paso, sin complicarte</p>
+						<p>💥 Hoy en día, quien no domina el marketing digital está perdiendo oportunidades.</p>
+						<p>💥 Ya sea para vender, emprender o hacer crecer tu presencia en redes, necesitas saberlo.</p>
+						<p> Con este producto digital aprenderás:</p>
+						<p>👉 Cómo atraer clientes con redes sociales, email marketing y publicidad digital</p>
+						<p>👉 Estrategias de ventas online, branding y posicionamiento de marca</p>
+						<p>👉 Herramientas prácticas como Facebook Ads, Instagram, SEO, y más</p>
+						<p>👉 Crear campañas que realmente funcionan, incluso si estás empezando</p>
+						<p> Beneficios:</p>
+						<p>✅  Multiplica tus ventas o alcance personal</p>
+						<p>✅  Aprende a generar ingresos con internet</p>
+						<p>✅  Construye una marca sólida y confiable</p>
+						<p>✅  Controla tu propio crecimiento sin depender de terceros</p>
+						<p>💥 Da el primer paso para dominar el marketing digital</p>
+						<p>📲 Descarga ahora y empieza a aplicar estrategias que funcionan</p>
+						<p>💬  Escríbeme para más información personalizada</p>
+						
+
+							<br>		
+														<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
+														<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</P>
+														<p>NO ESPERES MAS Y APROVECHAS ESTA GRAN OPORTUNIDAD, CONTACTANOS y podrás aprender desde la comodidad de tu hogar o en tus momentos libres, con acceso ilimitado de por vida y por un solo pago. No dejes pasar la oportunidad de adquirir nuevos conocimientos.</p>
+														<p>El acceso es inmediato: el curso está alojado en Google Drive, y podrás guardarlo, descargarlo y revisarlo tantas veces como desees.</p><br>
+														<p>✅ TU PAGO LO PUEDES HACER POR:</p>
+														<p>💳 DEPOSITO BANCARIO.</p>
+														<p>💵 SPIN BY OXXO.</p>
+														<p>🅿️ PAYPAL.</p><br>				
+														<p>¡¡¡Invierte en tu conocimiento, prepárate y sal a triunfar !!!</p>
+														<p>✨ Mas contenido para tu salud, bienestar y superación.✨</p>
+									
+														<!-- fuente de iconos: https://www.freepik.es/iconos/web -->
+														<a href="https://wa.link/d32x1m" target="_blank" class="BotonMod-wsp">
+															<img src="images/ico_whatsapp_32px.png" alt="WhatsApp" class="BotonMod-wsp-icon">WhatsApp
+														</a>
+														<a href="https://www.facebook.com/profile.php?id=61567273274842" target="_blank" class="BotonMod-fbk">
+															<img src="images/ico_facebook_32px.png" alt="facebook" class="BotonMod-fbk-icon"> Facebook
+														</a>
+														<!-- <a href="https://innovacionysaber.netlify.app/" target="_blank" class="BotonMod-sw">
+															<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
+														</a> -->
+														<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
+													</div>
+												</div>
+
+												<!-- Tarjeta 21 -->
+												<div class="card" data-category="superacion">
+													<div class="img">
+														<img src="images/fotomaquillaje.png" loading="lazy" alt="">
+													</div>
+													<div class="content">
+														<div class="text">
+															<h3>Unico Pago $ 99.00 mxn</h3>
+															<span>Aprende Maquillaje y Peluquería</span>
+														</div>
+														<button class="openModalBtn">Mas Información</button>
+													</div>
+												</div>
+									
+												<!-- Modal 21 -->
+												<div class="modal">
+													<div class="modal-content">
+														<span class="close">&times;</span>
+														<h2>Aprende Belleza, Maquillaje y Peluquería: Transforma tu pasión en tu talento</h2>
+						<br>
+						<p>💄 Aprende Belleza, Maquillaje y Peluquería: Transforma tu pasión en tu talento</p>
+						<p>💄 ¿Te apasiona la belleza y quieres aprender técnicas profesionales?</p>
+						<p>💄 Domina maquillaje, peluquería y secretos de belleza desde casa. ✨</p>
+						<p>💥 Hoy más que nunca, saber de maquillaje y peluquería no solo mejora tu imagen, sino que también puede abrirte puertas a nuevas oportunidades.</p>
+						<p>💥 Ya sea para uso personal o para emprender tu propio negocio, este producto es para ti.</p>
+						<p> Con este producto digital aprenderás:</p>
+						<p>👉 Técnicas de maquillaje profesional paso a paso</p>
+						<p>👉 Peinados, cortes y cuidados básicos de peluquería</p>
+						<p>👉 Secretos de belleza para potenciar tu imagen</p>
+						<p>👉 Tips de emprendimiento si quieres ofrecer tus servicios</p>
+						<p>✅  No necesitas experiencia previa</p>
+						<p>✅  Ideal para amantes de la belleza y futuros emprendedores</p>
+						<p>✅  100% digital: aprende a tu ritmo y desde cualquier lugar</p>
+						<p>✅  Incluye guías prácticas y ejercicios fáciles de seguir</p>
+						<br>
+						<p> BENEFICIOS:</p>
+						<p>💥 Realza tu belleza natural y la de otros</p>
+						<p>💥 Ahorra dinero aprendiendo a hacer todo tú misma</p>
+						<p>💥 Convierte tu pasión en ingresos</p>
+						<p>💥 Aprende habilidades que siempre tendrán demanda</p>
+						<p>📲 ¡Comienza hoy tu transformación en experta de belleza!</p>
+						<p>💬  Escríbeme para recibir más detalles o una muestra gratis</p>
+					
+							<br>		
+														<P>ARCHIVOS DIGITALES LISTOS PARA DESCARGAR E IMPRIMIR</P>
+														<P>Pagas por Depósito bancario o en Oxxo y se te enviará el enlace para que puedas abrirlos las veces que quieras y cuando quieras.</P>
+														<p>NO ESPERES MAS Y APROVECHAS ESTA GRAN OPORTUNIDAD, CONTACTANOS y podrás aprender desde la comodidad de tu hogar o en tus momentos libres, con acceso ilimitado de por vida y por un solo pago. No dejes pasar la oportunidad de adquirir nuevos conocimientos.</p>
+														<p>El acceso es inmediato: el curso está alojado en Google Drive, y podrás guardarlo, descargarlo y revisarlo tantas veces como desees.</p><br>
+														<p>✅ TU PAGO LO PUEDES HACER POR:</p>
+														<p>💳 DEPOSITO BANCARIO.</p>
+														<p>💵 SPIN BY OXXO.</p>
+														<p>🅿️ PAYPAL.</p><br>				
+														<p>¡¡¡Invierte en tu conocimiento, prepárate y sal a triunfar !!!</p>
+														<p>✨ Mas contenido para tu salud, bienestar y superación.✨</p>
+									
+														<!-- fuente de iconos: https://www.freepik.es/iconos/web -->
+														<a href="https://wa.link/d32x1m" target="_blank" class="BotonMod-wsp">
+															<img src="images/ico_whatsapp_32px.png" alt="WhatsApp" class="BotonMod-wsp-icon">WhatsApp
+														</a>
+														<a href="https://www.facebook.com/profile.php?id=61567273274842" target="_blank" class="BotonMod-fbk">
+															<img src="images/ico_facebook_32px.png" alt="facebook" class="BotonMod-fbk-icon"> Facebook
+														</a>
+														<!-- <a href="https://innovacionysaber.netlify.app/" target="_blank" class="BotonMod-sw">
+															<img src="images/ico_sitioweb_32px.png" alt="pagina web" class="BotonMod-sw-icon">Sitio Web
+														</a> -->
+														<div class="BotonMod-sw"> <p>Empieza YA.</p> </div>
+													</div>
+												</div>												
+
 		</div>
 
 <!-- 🔹 SECCION BIBLIOTECA -->
@@ -2375,8 +2709,14 @@ Aprende a tomar fotos impactantes con tu celular: retratos, productos, paisajes 
 	<h2>No encontrastes lo que buscabas ? contactame...</h2>
 
 	 <form action="https://formspree.io/f/xkndpeel" method="POST">
-		<input type="text" name="name" placeholder="Nombre" required>
-		<input type="email" name="email" placeholder="Correo Electrónico" required>
+
+		<!-- <input type="text" name="name" placeholder="Nombre" required> -->
+		<!-- <input type="email" name="email" placeholder="Correo Electrónico" required> -->
+
+		<input type="text" name="name" placeholder="Nombre" required autocomplete="name">
+<input type="email" name="email" placeholder="Correo Electrónico" required autocomplete="email">
+
+
 		<textarea name="message" placeholder="Mensaje" required></textarea>
 	  
 		<div class="input-container-btnenviar">
@@ -2386,11 +2726,7 @@ Aprende a tomar fotos impactantes con tu celular: retratos, productos, paisajes 
 	 </form>
 		<!-- los dos siguientes div de cierre y aperturara se pusieron  para separar las secciones del formulario de contacto y mapa -->
 </div>
-
-
-
-
-       
+ 
 
 				<div>
 
@@ -2534,10 +2870,8 @@ Aprende a tomar fotos impactantes con tu celular: retratos, productos, paisajes 
 
 	<!-- Botón Ir Arriba -->
 	<button id="btn-ir-arriba" class="btn-arriba">⬆</button>
-
-	<!-- <script src="js/script.js"></script> -->
+	
 	<script src="js/script.js"></script>
-
 
 </body>
 </html>

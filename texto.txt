@@ -282,6 +282,19 @@ En la sección de contacto (como alternativa adicional):
 
 ###########################################
 
+  /* ================================================
+     🔹 Mejorar imágenes (vividez y presentación)
+     ================================================ */
 
+  .card .img img {
+    filter: brightness(1.1) contrast(1.05) saturate(1.2);
+    transition: transform 0.4s ease, filter 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .card:hover .img img {
+    transform: scale(1.05);
+    filter: brightness(1.2) contrast(1.1) saturate(1.3);
+  }
 
 ##########################################

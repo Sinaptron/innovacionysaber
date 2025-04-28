@@ -175,7 +175,3 @@ Puedes cerrar la página si alguien abre las herramientas de inspección:
 ✔️ Detecta si las herramientas de desarrollo están abiertas.
 ✔️ Borra la página y redirige al usuario.
 
-
-Ofuscar el código fuente (Opcional)
-Si quieres que el código sea difícil de leer, usa una herramienta de ofuscación JavaScript como JS Obfuscator para hacer el código ilegible.
-https://obfuscator.io/#code

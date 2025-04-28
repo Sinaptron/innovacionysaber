@@ -22,7 +22,6 @@
     --color-texto: #333333; /* Color de texto principal */
     --color-footer: #a5d6a7; /* Verde claro para el footer */
     --color-borde: #c8e6c9; /* Verde muy suave para bordes */
-	--blanco-marfil: #FFFFF0;
 	--color-azul-claro: #ADD8E6; /* Azul claro */
 	--color-verde-fuerte: #006400;
 	--color-boton-whatsapp: #25d366;
@@ -31,6 +30,8 @@
 	--color-sw-btn: #FFB347; /* Color boton modal */
     --color-sw-btn-hover: #FF8C00; /* Color boton modal al pasar el mouse */
 	--color-negro: #000000;
+	--color-blanco-marfil: #FFFFF0;
+	--color-blanco: #fafafa; /* más suave o con una ligera tonalidad*/
 	--color-gris-1: #808080;
 	--color-gris-2: #AAAAAA;
   }
@@ -69,7 +70,9 @@
 	 ====================================================== */
   
   body {
-	font-family: "Roboto", sans-serif;
+	font-family: 'Roboto', sans-serif;
+	/* font-family: 'Poppins', sans-serif; */
+	/* font-family: 'Inter', sans-serif; */
 	line-height: 1.6;
 	/* color: var(--body-bg); */
 	overflow-x: hidden;
@@ -82,7 +85,7 @@
   
   header {
 	/* background:  #333; */
-	color: var(--blanco-marfil);
+	color: var(--color-blanco-marfil);
 	padding: 10px 0;
 	position: fixed;
 	width: 100%;
@@ -209,17 +212,20 @@
     min-height: 350px; /* Altura mínima en pantallas grandes */
     position: relative;
     overflow: hidden;
-    background: url(../images/fondo.jpg) center center no-repeat;
-    background-size: cover; /* La imagen cubre el área manteniendo proporción */
-    background-position: center center;
+    background: url(../images/fondo.jpg) center center / cover no-repeat; /* "cover" imagen cubre área y mantiene proporción*/
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    top: 21px;
+    padding: 40px 20px;
+    top: 21px;    
+    /* Mejora visibilidad nitidez fuerte de la imagen */
+	filter: brightness(1.1) contrast(1.2) saturate(1.3);
+    /* Opcional: transición suave para cambios de tamaño */
+    /* transition: all 0.5s ease-in-out; */
 }
+
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -230,7 +236,7 @@
 }
 
 .banner-titulo { 
-    /* color: var(--blanco-marfil); */
+    /* color: var(--color-blanco-marfil); */
     margin-top: 30px; /* Reduce el margen superior */
     margin-bottom: 10px; /* Reduce el margen inferior para acercarlo al subtítulo */
     /* font-size: clamp(3.10rem, 6.25vw, 6.25rem); */
@@ -248,13 +254,13 @@
 	}
 	5%,
 	95% {
-	  color: var(--blanco-marfil);
+	  color: var(--color-blanco-marfil);
 	  text-shadow: none;
 	}
   } 
 
 .banner-subtitulo {
-    color: var(--blanco-marfil);
+    color: var(--color-blanco-marfil);
     font-size: clamp(1.5rem, 3vw, 3rem);
     margin-top: 5px; /* Reduce el espacio superior del subtítulo */
 }
@@ -418,12 +424,19 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 24px;
+	font-size: 2.5rem;
 	/*  scroll-margin-top: 70px; scroll- navegacion -Ajusta según la altura de la barra - otra opcion usar codigo javascript*/
 
 	letter-spacing: .5rem;
-	text-shadow: 4px 4px 9px var(--color-negro);
-  }
+	/* text-shadow: 3px 5px 2px var(--color-blanco); */
+
+  	color: transparent;
+	background: var(--color-texto);
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	background-clip: text;
+	text-shadow: 0px 3px 3px var(--color-gris-1);
+}
   
   /* #Inicio { background: var(--h3) } */
   
@@ -518,7 +531,7 @@
   
   .text h3,
   .text span {
-	color: var(--color-hover);
+	color: var(--color-blanco-marfil);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 600;
@@ -691,7 +704,7 @@
   
   .footer {
 	background-color: var(--color-verde-fuerte);
-	color: var(--blanco-marfil);
+	color: var(--color-blanco-marfil);
 	padding: 20px 20px;
 	text-align: center;
   }
@@ -746,7 +759,7 @@
   
   .footer-section p,
   .footer-section a {
-	color: var(--blanco-marfil);
+	color: var(--color-blanco-marfil);
 	margin-bottom: 10px;
 	font-size: 15px;
 	text-decoration: none;
@@ -766,7 +779,7 @@
 
    .footer-socials a {
 	margin: 0 15px;
-	/* color: var(--blanco-marfil); */
+	/* color: var(--color-blanco-marfil); */
 	font-size: 24px;
 	/* transition: color 0.3s, transform 0.3s; */
 	margin-bottom: 15px;
@@ -920,7 +933,7 @@
   }
   
   .text {
-	color: var(--blanco-marfil);
+	color: var(--color-blanco-marfil);
 	text-align: center;
 	margin-top: 15px;
 	margin-bottom: 10px;
@@ -1012,7 +1025,7 @@
 	background-color: var(--color-fondo);
 	margin: 15% auto;
 	/* Centra el modal en la pantalla */
-	padding: 20px;
+	padding: 25px;
 	border-radius: 15px;
 	width: 70%;
 	max-width: 600px;
@@ -1041,8 +1054,8 @@
 	font-size: 40px;
 	font-weight: bold;
 	position: absolute;
-	top: 10px;
-	right: 15px;
+	top: 5px;
+	right: 10px;
 	cursor: pointer;
   }
   
@@ -1075,7 +1088,7 @@
   
   .BotonMod-wsp:hover {
 	background-color: var(--color-principal);
-	color: var(--blanco-marfil);
+	color: var(--color-blanco-marfil);
   }
   
   /* Icono de WhatsApp dentro del botón */
@@ -1120,7 +1133,7 @@
   
   .BotonMod-fbk:hover {
 	background-color: var(--color-fbk-btn-hover);
-	color: var(--blanco-marfil);
+	color: var(--color-blanco-marfil);
   }
   
   /* Icono de facebook dentro del botón */
@@ -1165,7 +1178,7 @@
   
   .BotonMod-sw:hover {
 	background-color: var(--color-sw-btn-hover);
-	color: var(--blanco-marfil);
+	color: var(--color-blanco-marfil);
   }
   
   /* Icono de sitio web dentro del botón */
@@ -1291,43 +1304,130 @@
 	 🔹 FILTRO BUSQUEDAS POR CATEGORIA
 	 ================================================ */
   
-section.filtrobusq {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
-  }
-  .filtro-bar {
-    margin-bottom: 2rem;
-    text-align: center;
-    background: var(--color-borde);
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);	
-  }
-  .filtro-bar label {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-right: 0.5rem;
-    color: var(--color-verde-fuerte);
-  }
-  .filtro-bar select {
-    padding: 0.6rem 1rem;
-    font-size: 1.3rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s;
-	color: var(--color-verde-fuerte);
-  }
-  .filtro-bar select:focus {
-    border-color: var(--color-verde-fuerte);
-    outline: none;
-  }
+	 /* este codigo contiene la opcion para desplegar icono basico de categoria seleccionada */
 
-  .ocultanofiltro {
-    display: none !important;
-  }
-  
+	 /* section.filtrobusq {
+		padding: 2rem;
+		max-width: 1200px;
+		margin: auto;
+	  }
+	  
+	  .filtro-bar {
+		margin-bottom: 2rem;
+		background: var(--color-borde);
+		padding: 1rem 2rem;
+		border-radius: 10px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	  } */
+	  
+	  /* .filtro-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	  } */
+	  
+	  /*
+	  .filtro-row label {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--color-verde-fuerte);
+		white-space: nowrap; /* Evita que se parta en varias líneas 
+	  } */
+	  
+	  /* .select-icon-container {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	  }
+	  
+	  .select-icon-container select {
+		padding: 0.6rem 1rem;
+		font-size: 1.3rem;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		background-color: #f9f9f9;
+		transition: border-color 0.3s;
+		color: var(--color-verde-fuerte);
+	  } */
+	  
+	  /* .select-icon-container select:focus {
+		border-color: var(--color-verde-fuerte);
+		outline: none;
+	  }
+	  
+	  .iconito {
+		font-size: 2rem;
+		color: var(--color-verde-fuerte);
+	  }
+	  
+	  .ocultanofiltro {
+		display: none !important;
+	  } */
+	  
+	 /* este codigo contiene la opcion para desplegar icono fontawesome de categoria seleccionada */
+	 section.filtrobusq {
+		padding: 2rem;
+		max-width: 1200px;
+		margin: auto;
+	  }
+	  
+	  .filtro-bar {
+		margin-bottom: 2rem;
+		background: var(--color-borde);
+		padding: 1rem 2rem;
+		border-radius: 10px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	  }
+	  
+	  .filtro-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		flex-wrap: wrap;
+	  }
+	  
+	  .filtro-row label {
+		font-size: 1.5rem;
+		font-weight: 600;
+		color: var(--color-verde-fuerte);
+		white-space: nowrap;
+	  }
+	  
+	  .select-icon-container {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	  }
+	  
+	  .select-icon-container select {
+		padding: 0.6rem 1rem;
+		font-size: 1.3rem;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		background-color: #f9f9f9;
+		transition: border-color 0.3s;
+		color: var(--color-verde-fuerte);
+	  }
+	  
+	  .select-icon-container select:focus {
+		border-color: var(--color-verde-fuerte);
+		outline: none;
+	  }
+	  
+	  #icono-filtro {
+		font-size: 1.8rem;
+		color: var(--color-verde-fuerte);
+	  }
+	  
+	  .ocultanofiltro {
+		display: none !important;
+	  }
+	  
+
+
 
   /* ================================================
 	 🔹 Mejorar imágenes (vividez y presentación)
@@ -1337,7 +1437,7 @@ section.filtrobusq {
 	filter: brightness(1.1) contrast(1.05) saturate(1.2);
 	transition: transform 0.4s ease, filter 0.3s ease;
 	border-radius: 10px;
-  }
+}
   
   .card:hover .img img {
 	transform: scale(1.05);

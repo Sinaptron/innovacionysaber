@@ -212,7 +212,7 @@
     min-height: 350px; /* Altura mínima en pantallas grandes */
     position: relative;
     overflow: hidden;
-    background: url(../images/fondo.jpg) center center / cover no-repeat; /* "cover" imagen cubre área y mantiene proporción*/
+    background: url(../images/fondo.jpg) center center / cover no-repeat; "cover" imagen cubre área y mantiene proporción
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -224,8 +224,27 @@
 	filter: brightness(1.1) contrast(1.2) saturate(1.3);
     /* Opcional: transición suave para cambios de tamaño */
     /* transition: all 0.5s ease-in-out; */
-}
+  }
 
+  .banner-content {
+	background-color: #007bff;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+
+	
+	/* width: 20rem; */
+	/* height: auto; */
+	/* padding: 2rem; */
+	/* border-radius: 1rem; */
+	/* font-size: 1rem; */
+	/* color:white; */
+	background: rgba(2, 80, 3, 0.25);
+	  -webkit-backdrop-filter: blur(5px);
+	  backdrop-filter: blur(5px);
+	border: 1.5px solid rgba(209, 213, 219, 0.3);
+}
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
@@ -265,6 +284,9 @@
     margin-top: 5px; /* Reduce el espacio superior del subtítulo */
 }
   
+
+
+
 /* Ajustes específicos para móviles */
 @media (max-width: 768px) {
     .banner-titulo {
@@ -1027,7 +1049,7 @@
 	/* Centra el modal en la pantalla */
 	padding: 25px;
 	border-radius: 15px;
-	width: 70%;
+	width: 85%;
 	max-width: 600px;
 	box-shadow: 0px 5px 15px var(--color-secundario);
 	animation: slideIn 0.5s ease-out;
@@ -1050,7 +1072,7 @@
   /* Estilo del botón de cierre */
   
   .close {
-	color: var(--nav-footer);
+	color: var(--color-verde-fuerte);
 	font-size: 40px;
 	font-weight: bold;
 	position: absolute;
@@ -1491,6 +1513,10 @@
     flex-grow: 1;
 }
 
+.invitacion-card span {
+	font-size: 1.5rem;
+}
+
 .invitacion-card  img {
     border-radius: 10px;
     /* padding: 1.5rem; */
@@ -1543,4 +1569,11 @@
     .invitacion-card {
         padding: 1.25rem;
     }
+	.invitacion-card  img {
+		width: 12%;
+		height: 12%;
+	}
+	.invitacion-card span {
+		font-size: 1.3rem;
+	}
 }

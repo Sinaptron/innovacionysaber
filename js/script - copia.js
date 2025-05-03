@@ -50,11 +50,7 @@ document.addEventListener("keydown", function (event) {
 
 
 
-
-
-
-
-
+// ACTIVAR LOS CODIGOS DE ARRIBA PARA EVITAR COPIA DE CODIGO
 
 
 

@@ -1,3 +1,5 @@
+
+
 atajos teclado para ver codigo fuente o diseño programador
 teclas F12, Ctrl+Shift+I, Ctrl+Shift+J, y Ctrl+U
 

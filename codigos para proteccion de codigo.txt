@@ -8,8 +8,10 @@ javascript html y css - con herramientas:
 
 usar este para HTML:
 https://www.phpkobo.com/html-obfuscator
+
 usar este para CSS:
 https://kangax.github.io/html-minifier/
+
 usar este para JS:
 https://obfuscator.io/
 

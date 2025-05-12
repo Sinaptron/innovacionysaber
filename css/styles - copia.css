@@ -206,13 +206,31 @@
   /* ======================================================
 	 🔹 BANNER PRINCIPAL
 	 ====================================================== */
-  
+  /* PARALLAX - IMAGEN Y CONTENIDO EN EL BANNER*/
+    #scene {
+      width: 100%;
+      height: 70%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #scene img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      pointer-events: none;
+    /* border-left: 0; */
+	}
+
+
   .banner {
     width: 100%;
     min-height: 350px; /* Altura mínima en pantallas grandes */
     position: relative;
     overflow: hidden;
-    background: url(../images/fondo.jpg) center center / cover no-repeat; "cover" imagen cubre área y mantiene proporción
+    background: url(../images/fondo.png) center center / cover no-repeat; /* "cover" imagen cubre área y mantiene proporción*/
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -227,13 +245,11 @@
   }
 
   .banner-content {
-	background-color: #007bff;
+	/* background-color: #007bff; */
 	color: white;
 	padding: 10px;
 	text-align: center;
-	border-radius: 10px;
-
-	
+	border-radius: 10px;	
 	/* width: 20rem; */
 	/* height: auto; */
 	/* padding: 2rem; */
@@ -267,12 +283,12 @@
  @keyframes efecto {
 	0%,
 	100% {
-	  color: var(--color-footer);
+	  /* color: var(--color-footer); */
 	  text-shadow: 0 0 10px #7bff00, 0 0 20px #7bff00, 0 0 30px #7bff00,
 		0 0 40px #7bff00;
 	}
-	5%,
-	95% {
+	50%,
+	50% {
 	  color: var(--color-blanco-marfil);
 	  text-shadow: none;
 	}
@@ -488,7 +504,7 @@
   
   .card {
 	position: relative;
-	height: 230px;
+	height: 235px;
 	width: 100%;
 	max-width: 280px;
 	margin: 15px 0px;
@@ -509,10 +525,10 @@
 
   .card img {
 	width: 100%;
-	height: auto;
+	height: 100%;
   }
   
-  .img img {
+  img {
 	object-fit: cover;
 	object-position: center;
   }
@@ -1577,3 +1593,39 @@
 		font-size: 1.3rem;
 	}
 }
+
+
+
+
+/* .parallax_galerias { */
+  /* The height needs to be set to a fixed value for the effect to work.
+  /* 100vh is the full height of the viewport. */
+  /* height: 100vh; */
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  /* overflow-x: hidden; */
+  /* Enable scrolling on the page. */
+  /* overflow-y: auto; */
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  /* perspective: 2px; */
+/* } */
+
+/* Section - Parallax */
+.parallax_fondocurso {
+  /* background: red; */
+  background: url(../images/fondocurso.png);
+}
+.parallax_fondoesoter {
+  /* background: red; */
+  background: url(../images/fondoesoter.png);
+}
+.parallax_fondomultimed {
+  /* background: red; */
+  background: url(../images/fondomultimed.png);
+}
+.parallax_fondotecnol {
+  /* background: red; */
+  background: url(../images/fondotecnol.png);
+}
+/* .parallax_fondocurso::after {
+  background: url(../images/fondoesoterparallax3.png);
+} */

@@ -1,16 +1,20 @@
 //BLOQUEO DESCARGA DE IMAGENES Y VISUALIZACION DE CODIGO FUENTE
 // Bloquear teclas como F12, Ctrl+U, Ctrl+Shift+I
 
-document.addEventListener("keydown", function (event) {
-    // Bloquea F12, Ctrl+U, Ctrl+Shift+I
-  if (
-    event.key === "F12" ||
-    (event.ctrlKey && event.shiftKey && event.key === "I") ||
-    (event.ctrlKey && event.key === "U")
-  ) {
-    event.preventDefault();
-  }
-});
+// document.addEventListener("keydown", function (event) {
+//     Bloquea F12, Ctrl+U, Ctrl+Shift+I
+//   if (
+//     event.key === "F12" ||
+//     (event.ctrlKey && event.shiftKey && event.key === "I") ||
+//     (event.ctrlKey && event.key === "U")
+//   ) {
+//     event.preventDefault();
+//   }
+// });
+
+// codigo de arriba validar si al descomentar se ejecutan los script de proteccion o bloquea algunos movimientos
+
+
 
 
 

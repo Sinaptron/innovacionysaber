@@ -212,6 +212,10 @@
       height: 70%;
       overflow: hidden;
       position: relative;
+
+  /* padding: 10px; */
+  box-sizing: border-box;
+
     }
 
     #scene img {
@@ -222,6 +226,9 @@
       height: auto;
       pointer-events: none;
     /* border-left: 0; */
+
+  z-index: -1;
+
 	}
 
 
@@ -321,22 +328,23 @@
 @media (max-width: 480px) {
     .banner-titulo {
         font-size: 1.7rem; /* Aún más pequeño en pantallas muy pequeñas */
-        margin-top: 30px;
+        margin-top: 10px;
         margin-bottom: 10px;
     }
     .banner-subtitulo {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 370px) {
     .banner-titulo {
         font-size: 1.5rem; /* Aún más pequeño en pantallas muy pequeñas */
-        margin-top: 20px;
+        margin-top: 10px;
         margin-bottom: 10px;
     }
     .banner-subtitulo {
         font-size: 0.8rem;
+
     }
 }
 
